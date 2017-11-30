@@ -1,0 +1,8 @@
+* Wikipedia Sidebar
+
+A Firefox webextension that displays Wikipedia abstracts in a sidebar.
+
+Select text and press Ctrl+Shift+V
+
+[[file:screen.png]]
+

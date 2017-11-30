@@ -1,0 +1,33 @@
+@font-face { font-family: "et-book";
+             src: url("et-book-roman-line-figures.woff");
+             font-weight: normal;
+             font-style: normal; }
+
+@font-face { font-family: "et-book";
+             src: url("et-book-bold-line-figures.woff");
+             font-weight: bold;
+             font-style: normal; }
+
+body {
+    font-family: et-book;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 8px;
+    color: #8b888b;
+    background-color: #fbfbfb;
+}
+
+div{
+    font-weight: normal;
+    margin: 4px;
+    padding: 2px 0px;
+}
+
+a {
+    color: #d31245;
+}
+
+#title {
+    font-size: 1.5em;
+    font-weight: bold
+}

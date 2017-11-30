@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Wikipedia Sidebar",
+    "description": "Wikipedia abstracts in a sidebar.",
+    "version": "1.0",
+
+    "icons": {
+        "48": "icons/icon.png",
+        "96": "icons/icon@2x.png"
+    },
+
+    "applications": {
+        "gecko": {
+            "id": "wikipedia@strangel8p",
+            "strict_min_version": "56.0"
+        }
+    },
+
+    "sidebar_action": {
+        "default_title": "Wikipedia",
+        "default_panel": "sidebar/panel.html",
+        "browser_style": false
+    },
+    
+    "commands": {
+        "_execute_sidebar_action": {
+            "suggested_key": {"default": "Ctrl+Shift+V"},
+            "description": "Sidebar Toggle"
+        }
+    },
+
+    "permissions": [
+        "activeTab",
+        "<all_urls>"
+    ]
+
+}
