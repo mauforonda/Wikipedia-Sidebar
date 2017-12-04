@@ -2,16 +2,17 @@
     "manifest_version": 2,
     "name": "Wikipedia Sidebar",
     "description": "Wikipedia abstracts in a sidebar.",
-    "version": "1.0",
+    "version": "1.1",
+    "homepage_url": "https://github.com/strangel8p/Wikipedia-Sidebar",
 
     "icons": {
-        "48": "icons/icon.png",
-        "96": "icons/icon@2x.png"
+        "48": "wikipedia.svg",
+        "96": "wikipedia.svg"
     },
 
     "applications": {
         "gecko": {
-            "id": "wikipedia@strangel8p",
+            "id": "wikipedia-sidebar@strangel8p",
             "strict_min_version": "56.0"
         }
     },
@@ -19,6 +20,7 @@
     "sidebar_action": {
         "default_title": "Wikipedia",
         "default_panel": "sidebar/panel.html",
+        "default_icon": "wikipedia.svg",
         "browser_style": false
     },
     
