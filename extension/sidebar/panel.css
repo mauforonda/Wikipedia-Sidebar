@@ -10,8 +10,8 @@
 
 body {
     font-family: et-book;
-    font-size: 15px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1.4;
     padding: 8px;
     color: #8b888b;
     background-color: #fbfbfb;
@@ -24,11 +24,42 @@ div{
 }
 
 a {
-    color: #d31245;
-    text-decoration: none
+    color: #cf3254;;
+    text-decoration: none;
+    cursor: pointer
+}
+
+a:hover{
+    text-decoration: underline
 }
 
 #title {
     font-size: 1.5em;
     font-weight: bold
+}
+
+.domain {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 0.5em 0em
+}
+
+.similar {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em 0em
+}
+
+.candidate{
+    margin: 0.5em;
+    font-size: 1em
+}
+
+#suggestions{
+    padding-top: 0px
+}
+
+#intro{
+    padding-top: 0px;
+    font-size: 1em
 }
