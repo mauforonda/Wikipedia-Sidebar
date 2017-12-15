@@ -24,7 +24,7 @@ div{
 }
 
 a {
-    color: #cf3254;;
+    color: #cf3254;
     text-decoration: none;
     cursor: pointer
 }
@@ -62,4 +62,12 @@ a:hover{
 #intro{
     padding-top: 0px;
     font-size: 1em
+}
+
+.external{
+    color: #8b888b;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(transparent,transparent),url("external.svg");
+    padding-right: 13px
 }

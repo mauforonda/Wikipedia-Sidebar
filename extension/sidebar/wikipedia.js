@@ -54,12 +54,21 @@ function disambiguate(selection) {
 
               // Make candidate links
               if (c.tagName == 'A') {
-                cLink = document.createElement('a')
-                cLink.textContent = c.getAttribute('title')
-                cLink.addEventListener("click", function( event ) {
-                  suggestions.remove()
-                  wikipediaBody(event.target.textContent)
-                })
+                if (c.getAttribute('class') == 'external text') {
+                  cLink = document.createElement('a')
+                  cLink.setAttribute('href', c.getAttribute('href'))
+                  cLink.setAttribute('class', 'external')
+                  cLink.textContent = c.textContent
+                } else if (c.getAttribute('class') == 'new') {
+                  cLink = document.createTextNode(c.textContent)
+                } else {
+                  cLink = document.createElement('a')
+                  cLink.textContent = c.getAttribute('title')
+                  cLink.addEventListener("click", function( event ) {
+                    suggestions.remove()
+                    wikipediaBody(event.target.textContent)
+                  })
+                }
                 candidateDisplay.appendChild(cLink)
 
                 // Make candidate text
@@ -119,16 +128,30 @@ function wikipediaImage(selection){
 
 // Get article extract
 function wikipediaBody(selection){
+  
+  // Should this extract point to a disambiguation page?
+  function ambiguous(extract){
+    ambiguous = ['may refer to', 'is the name of', 'may also refer to']
+    for (a=0; a<ambiguous.length; a++) {
+      if (extract.indexOf(ambiguous[a]) != "-1") {
+        return 'ambiguous'
+        break
+      }}
+    return 'clear'
+  }
+  
   url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts&exintro=&explaintext=&titles=' + selection
   urlString = fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
       pageid = data.query.pageids[0]
       if (pageid == '-1') {
-        document.getElementById('selection').textContent = "Couldn't find a page for that!"
-      } else if (data['query']['pages'][pageid]['extract'].indexOf("may refer to:") != "-1") {
-        disambiguate(selection)
-      } else if (data['query']['pages'][pageid]['extract'].indexOf("is the name of:") != "-1") {
+        noArticle = document.createElement('div')
+        noArticle.setAttribute('id', 'intro')
+        noArticle.textContent = "Couldn't find a page for that!"
+        body = document.body
+        body.appendChild(noArticle)
+      } else if (ambiguous(data['query']['pages'][pageid]['extract']) == "ambiguous") {
         disambiguate(selection)
       } else {
         articleTitle = document.createElement('div')
