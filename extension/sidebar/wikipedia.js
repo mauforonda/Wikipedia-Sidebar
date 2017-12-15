@@ -129,18 +129,8 @@ function wikipediaImage(selection){
 // Get article extract
 function wikipediaBody(selection){
   
-  // Should this extract point to a disambiguation page?
-  function ambiguous(extract){
-    ambiguous = ['may refer to', 'is the name of', 'may also refer to']
-    for (a=0; a<ambiguous.length; a++) {
-      if (extract.indexOf(ambiguous[a]) != "-1") {
-        return 'ambiguous'
-        break
-      }}
-    return 'clear'
-  }
+  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection
   
-  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts&exintro=&explaintext=&titles=' + selection
   urlString = fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
@@ -151,7 +141,7 @@ function wikipediaBody(selection){
         noArticle.textContent = "Couldn't find a page for that!"
         body = document.body
         body.appendChild(noArticle)
-      } else if (ambiguous(data['query']['pages'][pageid]['extract']) == "ambiguous") {
+      } else if (data['query']['pages'][pageid]['templates']) {
         disambiguate(selection)
       } else {
         articleTitle = document.createElement('div')
