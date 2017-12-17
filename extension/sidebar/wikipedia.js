@@ -1,6 +1,7 @@
 // Disambiguation
 function disambiguate(selection) {
-
+  
+  pagestate = 'disambiguation'
   body = document.body
     
   // Fetch HTML page
@@ -68,6 +69,8 @@ function disambiguate(selection) {
                   cLink.setAttribute('class', 'wiki')
                   cLink.textContent = c.getAttribute('title')
                   cLink.addEventListener("click", function( event ) {
+                    body.removeEventListener('keydown', navigate)
+                    body.removeEventListener('keyup', navigate)
                     suggestions.remove()
                     wikipediaBody(event.target.textContent)
                   })
@@ -88,6 +91,8 @@ function disambiguate(selection) {
                     iLink.setAttribute('class', 'wiki')
                     iLink.textContent = i.getAttribute('title')
                     iLink.addEventListener("click", function( event ) {
+                      body.removeEventListener('keydown', navigate)
+                      body.removeEventListener('keyup', navigate)
                       suggestions.remove()
                       wikipediaBody(event.target.textContent)
                     })
@@ -95,6 +100,7 @@ function disambiguate(selection) {
                   } else if (i.nodeType == 3) {
                     iText = document.createTextNode(i.textContent)
                     iNode.appendChild(iText)
+
                   }
                 })
                 candidateDisplay.appendChild(iNode)
@@ -113,10 +119,10 @@ function disambiguate(selection) {
       wLinks = document.getElementsByClassName('wiki')
       selected = 0
       wLinks[selected].classList.add('selected')
-      var map = {}
-      onkeydown = onkeyup = function(e){
+      var map = {}      
+      function navigate(e) {
         e.preventDefault()
-        map[e.keyCode] = e.type == 'keydown';
+        map[e.keyCode] = e.type == 'keydown'
         // Enter
         if(map[13]){
           wLinks[selected].click()
@@ -141,7 +147,9 @@ function disambiguate(selection) {
           browser.sidebarAction.close()
         }
       }
-
+      body.addEventListener('keydown', navigate)
+      body.addEventListener('keyup', navigate)
+      
       // Ugly hack to focus sidebar
       document.getElementById('focused').remove()
       
@@ -161,13 +169,14 @@ function wikipediaImage(selection){
         body = document.body
         articleBody = document.getElementById('article')
         body.insertBefore(articleImage, articleBody)
-        // document.getElementById('thumbnail').appendChild(articleImage)
       }
     })
 }
 
 // Get article extract
 function wikipediaBody(selection){
+
+  pagestate = 'article'
   
   url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection
   
@@ -198,9 +207,11 @@ function wikipediaBody(selection){
         body.appendChild(articleTitle)
         body.appendChild(articleBody)
         body.appendChild(reference)
-        wikipediaImage(selection)
         // Ugly hack to focus sidebar
-        document.getElementById('focused').remove()
+        if (document.getElementById('focused')) {
+          document.getElementById('focused').remove()
+        }        
+        wikipediaImage(selection)
       }
     })
 }
