@@ -71,3 +71,16 @@ a:hover{
     background-image: linear-gradient(transparent,transparent),url("external.svg");
     padding-right: 13px
 }
+
+.selected{
+    background-color: #fffabf;
+    color: #cf3254;
+    text-decoration: underline;
+    border-radius: 2px
+}
+
+#focused{
+    border: none;
+    color: #fbfbfb;
+    background: #fbfbfb;
+}

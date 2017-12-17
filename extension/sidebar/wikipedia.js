@@ -1,6 +1,8 @@
 // Disambiguation
 function disambiguate(selection) {
-  
+
+  body = document.body
+    
   // Fetch HTML page
   url = 'https://en.wikipedia.org/wiki/' +  selection
   urlString = fetch(url)
@@ -63,6 +65,7 @@ function disambiguate(selection) {
                   cLink = document.createTextNode(c.textContent)
                 } else {
                   cLink = document.createElement('a')
+                  cLink.setAttribute('class', 'wiki')
                   cLink.textContent = c.getAttribute('title')
                   cLink.addEventListener("click", function( event ) {
                     suggestions.remove()
@@ -82,6 +85,7 @@ function disambiguate(selection) {
                 c.childNodes.forEach((i) => {
                   if (i.tagName == 'A') {
                     iLink = document.createElement('a')
+                    iLink.setAttribute('class', 'wiki')
                     iLink.textContent = i.getAttribute('title')
                     iLink.addEventListener("click", function( event ) {
                       suggestions.remove()
@@ -103,8 +107,44 @@ function disambiguate(selection) {
         }}
 
       // Display
-      body = document.body
       body.appendChild(suggestions)
+
+      // Navigate Wikipedia links through arrow keys
+      wLinks = document.getElementsByClassName('wiki')
+      selected = 0
+      wLinks[selected].classList.add('selected')
+      var map = {}
+      onkeydown = onkeyup = function(e){
+        e.preventDefault()
+        map[e.keyCode] = e.type == 'keydown';
+        // Enter
+        if(map[13]){
+          wLinks[selected].click()
+          // Up          
+        } else if(map[38]) {
+          if (selected > 0) {
+            wLinks[selected].classList.remove('selected')
+            selected--
+            wLinks[selected].classList.add('selected')
+            wLinks[selected].scrollIntoView({behavior: "instant", block: "nearest"})
+          }
+          // Down
+        } else if (map[40]) {
+          if (selected < wLinks.length) {
+            wLinks[selected].classList.remove('selected')
+            selected++
+            wLinks[selected].classList.add('selected')
+            wLinks[selected].scrollIntoView({behavior: "instant", block: "nearest"})
+          }
+          // Ctrl+Shift+V
+        } else if (map[17] && map[16] && map[86]) {
+          browser.sidebarAction.close()
+        }
+      }
+
+      // Ugly hack to focus sidebar
+      document.getElementById('focused').remove()
+      
     })}
 
 // Get article image
@@ -159,6 +199,8 @@ function wikipediaBody(selection){
         body.appendChild(articleBody)
         body.appendChild(reference)
         wikipediaImage(selection)
+        // Ugly hack to focus sidebar
+        document.getElementById('focused').remove()
       }
     })
 }
