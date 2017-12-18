@@ -211,10 +211,12 @@ function wikipediaBody(selection){
         articleBody = document.createElement('div')
         articleBody.setAttribute('id', 'article')
         articleBody.textContent = data['query']['pages'][pageid]['extract']
+        referenceContainer = document.createElement('div')
+        referenceContainer.setAttribute('id', 'reference')
         reference = document.createElement('a')
         reference.setAttribute('href', 'https://en.wikipedia.org/wiki/' + selection)
-        reference.setAttribute('id', 'reference')
         reference.textContent = "Wikipedia"
+        referenceContainer.appendChild(reference)
         separator1 = document.createElement('hr')
         separator1.setAttribute('id', 'titleseparator')
         separator2 = document.createElement('hr')
@@ -224,7 +226,7 @@ function wikipediaBody(selection){
         body.appendChild(separator1)
         body.appendChild(articleBody)
         body.appendChild(separator2)
-        body.appendChild(reference)
+        body.appendChild(referenceContainer)
         // Ugly hack to focus sidebar
         if (document.getElementById('focused')) {
           document.getElementById('focused').remove()

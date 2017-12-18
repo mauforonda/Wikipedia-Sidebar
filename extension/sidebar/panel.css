@@ -66,8 +66,13 @@ a:hover{
 }
 
 #reference{
-    padding: 15px 25px 30px 25px;
+    padding: 15px 25px 30px 20px;
     display: block;
+}
+
+#reference a{
+    padding: 5px 5px;
+    border-radius: 3px
 }
 
 #title {
