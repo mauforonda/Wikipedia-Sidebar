@@ -12,55 +12,99 @@ body {
     font-family: et-book;
     font-size: 14px;
     line-height: 1.4;
-    padding: 8px;
+    margin: 0px;
+    padding: 0px;
     color: #8b888b;
     background-color: #fbfbfb;
+    overflow-x: hidden
 }
 
 div{
     font-weight: normal;
-    margin: 4px;
-    padding: 2px 0px;
+    padding: 15px 25px;
 }
 
+#imagediv{
+    padding: 0px;
+    max-height: 300px;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, rgb(173, 173, 173), rgba(255, 255, 255, 0.61));
+}
+
+#imagedivdiv{
+    padding: 0px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+#imgback{
+    position:absolute;
+    height: 300px;
+    width: 100%;
+    background-color: #fbfbfb
+}
+
+img{
+    position:relative;
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+
 a {
-    color: #cf3254;
+    color: #a26d54;
     text-decoration: none;
     cursor: pointer
 }
 
 a:hover{
-    text-decoration: underline
+    background-color: #fffabf;
+    color: #a26d54;
+    text-decoration: none;
+    border-radius: 2px
+}
+
+#reference{
+    padding: 15px 25px 30px 25px;
+    display: block;
 }
 
 #title {
     font-size: 1.5em;
-    font-weight: bold
+    font-weight: bold;
+    padding: 12px 25px;
+    margin: 0px;
 }
 
 .domain {
     font-size: 1.1em;
     font-weight: bold;
-    padding: 0.5em 0em
+    padding: 0em 0em 0.5em 0em
 }
 
 .similar {
     font-size: 1.2em;
     font-weight: bold;
-    padding: 0.5em 0em
+    padding: 0em 0em 0.5em 0em
 }
 
 .candidate{
-    margin: 0.5em;
-    font-size: 1em
+    margin: 0.9em 0.5em;
+    font-size: 0.9em;
 }
 
 #suggestions{
     padding-top: 0px
 }
 
+#noarticle{
+    padding: 0px 20px;
+    font-size: 1em    
+}
+
 #intro{
-    padding-top: 0px;
+    padding: 10px 10px 0px 0px;
     font-size: 1em
 }
 
@@ -72,10 +116,15 @@ a:hover{
     padding-right: 13px
 }
 
+.wiki{
+    padding: 3px
+}
+
 .selected{
     background-color: #fffabf;
-    color: #cf3254;
-    text-decoration: underline;
+    color: #a26d54;
+    text-decoration: none;
+    padding: 3px;
     border-radius: 2px
 }
 
@@ -83,4 +132,31 @@ a:hover{
     border: none;
     color: #fbfbfb;
     background: #fbfbfb;
+}
+
+hr{
+    border: 0;    
+    border-top: 1px dotted #c3c2c2;
+    margin: 20px 0;
+}
+
+#imageseparator{
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: #5c5c5c;
+    margin: 3px 0px 0px 0px;
+}
+
+#titleseparator{
+    border-style: dotted;
+    border-width: 1px 0px 0px 0px;
+    border-color: #c3c2c2;
+    margin: 2px 25px;
+}
+
+#refseparator{
+    border-style: dotted;
+    border-width: 1px 0px 0px 0px;
+    border-color: #c3c2c2;
+    margin: 2px 60% 2px 25px;
 }

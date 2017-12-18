@@ -1,7 +1,6 @@
 // Disambiguation
 function disambiguate(selection) {
   
-  pagestate = 'disambiguation'
   body = document.body
     
   // Fetch HTML page
@@ -33,6 +32,8 @@ function disambiguate(selection) {
 
         // Make a domain section
         if (candidateNodes[i].tagName == 'H2') {
+          separator = document.createElement('hr')
+          suggestions.appendChild(separator)
           sectionNode = candidateNodes[i].querySelector('.mw-headline')
           section = document.createElement('div')
           section.setAttribute('class', 'domain')
@@ -41,6 +42,8 @@ function disambiguate(selection) {
 
           // Make a similar word section
         } else if (candidateNodes[i].tagName == 'DL') {
+          separator = document.createElement('hr')
+          suggestions.appendChild(separator)
           section = document.createElement('div')
           section.setAttribute('class', 'similar')
           section.textContent = candidateNodes[i].textContent
@@ -136,7 +139,7 @@ function disambiguate(selection) {
           }
           // Down
         } else if (map[40]) {
-          if (selected < wLinks.length) {
+          if (selected < wLinks.length - 1) {
             wLinks[selected].classList.remove('selected')
             selected++
             wLinks[selected].classList.add('selected')
@@ -157,18 +160,29 @@ function disambiguate(selection) {
 
 // Get article image
 function wikipediaImage(selection){
-  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=pageimages&pithumbsize=280&titles=' + selection
+  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=pageimages&pithumbsize=360&titles=' + selection
   urlString = fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
       pageid = data.query.pageids[0]
       if (pageid != '-1' && data['query']['pages'][pageid]['thumbnail'] != undefined) {
+        imagediv = document.createElement('div')
+        imagediv.setAttribute('id', 'imagediv')
+        imagedivdiv = document.createElement('div')
+        imagedivdiv.setAttribute('id', 'imagedivdiv')
+        imageback = document.createElement('div')
+        imageback.setAttribute('id', 'imgback')
         articleImage = document.createElement('img')
+        articleImage.setAttribute('id', 'articleimg')
         articleImage.setAttribute('src', data['query']['pages'][pageid]['thumbnail']['source'])
         articleImage.setAttribute('alt', data['query']['pages'][pageid]['title'])
+        articleImage.addEventListener('load', function(e) {imagedivdiv.setAttribute('style', 'background: linear-gradient(to bottom, transparent, #0a0415cc)')})
+        imagediv.appendChild(imageback)
+        imagediv.appendChild(articleImage)
+        imagedivdiv.appendChild(imagediv)
         body = document.body
-        articleBody = document.getElementById('article')
-        body.insertBefore(articleImage, articleBody)
+        articleTitle = document.getElementById('title')
+        body.insertBefore(imagedivdiv, articleTitle)
       }
     })
 }
@@ -176,8 +190,6 @@ function wikipediaImage(selection){
 // Get article extract
 function wikipediaBody(selection){
 
-  pagestate = 'article'
-  
   url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection
   
   urlString = fetch(url)
@@ -186,7 +198,7 @@ function wikipediaBody(selection){
       pageid = data.query.pageids[0]
       if (pageid == '-1') {
         noArticle = document.createElement('div')
-        noArticle.setAttribute('id', 'intro')
+        noArticle.setAttribute('id', 'noarticle')
         noArticle.textContent = "Couldn't find a page for that!"
         body = document.body
         body.appendChild(noArticle)
@@ -203,9 +215,15 @@ function wikipediaBody(selection){
         reference.setAttribute('href', 'https://en.wikipedia.org/wiki/' + selection)
         reference.setAttribute('id', 'reference')
         reference.textContent = "Wikipedia"
+        separator1 = document.createElement('hr')
+        separator1.setAttribute('id', 'titleseparator')
+        separator2 = document.createElement('hr')
+        separator2.setAttribute('id', 'refseparator')
         body = document.body
         body.appendChild(articleTitle)
+        body.appendChild(separator1)
         body.appendChild(articleBody)
+        body.appendChild(separator2)
         body.appendChild(reference)
         // Ugly hack to focus sidebar
         if (document.getElementById('focused')) {
