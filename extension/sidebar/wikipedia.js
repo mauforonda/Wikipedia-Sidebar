@@ -2,7 +2,7 @@
 function disambiguate(selection) {
   
   body = document.body
-    
+  
   // Fetch HTML page
   url = 'https://en.wikipedia.org/wiki/' +  selection
   urlString = fetch(url)
@@ -236,9 +236,36 @@ function wikipediaBody(selection){
     })
 }
 
+function noSelection(){
+  whatSelection = document.createElement('div')
+  whatSelection.setAttribute('id', 'noselection')
+  whatMessage = document.createElement('p')
+  whatMessage.textContent = "You selected nothing or this page doesn't allow me get your selection."
+  whatInvitation = document.createElement('p')
+  whatInvitation.textContent = "Please type your query:"
+  whatSelection.appendChild(whatMessage)
+  whatSelection.appendChild(whatInvitation)
+  searchBox = document.getElementById('focused')
+  body = document.body
+  body.insertBefore(whatSelection, searchBox)
+  searchBox.setAttribute('style', 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 0px 25px; line-height: 25px; border-radius: 3px; width: 75%')
+  searchBox.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      whatSelection.remove()
+      searchBox.setAttribute('style', 'border: none; color: #fbfbfb; background: #fbfbfb;')
+      wikipediaBody(searchBox.value)
+    }
+  })
+}
+
 function messageDo(message) {
   selection = message.selected
-  wikipediaBody(selection)
+  if (selection == ""){
+    noSelection()
+  } else {
+    wikipediaBody(selection)
+  }
 }
 
 function tabDo(tabs) {

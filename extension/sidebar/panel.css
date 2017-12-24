@@ -165,3 +165,7 @@ hr{
     border-color: #c3c2c2;
     margin: 2px 60% 2px 25px;
 }
+
+#noselection p{
+    margin: 10px 0px
+}
