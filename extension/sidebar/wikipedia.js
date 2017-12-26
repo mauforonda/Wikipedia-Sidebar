@@ -1,3 +1,191 @@
+// Wikipedia language codes 
+langCode = {
+  "aa": "Afar",
+  "ab": "Abkhazian",
+  "af": "Afrikaans",
+  "ak": "Akan",
+  "am": "Amharic",
+  "an": "Aragonese",
+  "ar": "Arabic",
+  "as": "Assamese",
+  "av": "Avar",
+  "ay": "Aymara",
+  "az": "Azerbaijani",
+  "ba": "Bashkir",
+  "be": "Belarusian",
+  "bg": "Bulgarian",
+  "bh": "Bihari",
+  "bi": "Bislama",
+  "bm": "Bambara",
+  "bn": "Bengali",
+  "bo": "Tibetan",
+  "br": "Breton",
+  "bs": "Bosnian",
+  "ca": "Catalan",
+  "ce": "Chechen",
+  "ch": "Chamorro",
+  "co": "Corsican",
+  "cr": "Cree",
+  "cs": "Czech",
+  "cu": "Old Church Slavonic / Old Bulgarian",
+  "cv": "Chuvash",
+  "cy": "Welsh",
+  "da": "Danish",
+  "de": "German",
+  "dv": "Divehi",
+  "dz": "Dzongkha",
+  "ee": "Ewe",
+  "el": "Greek",
+  "en": "English",
+  "eo": "Esperanto",
+  "es": "Spanish",
+  "et": "Estonian",
+  "eu": "Basque",
+  "fa": "Persian",
+  "ff": "Peul",
+  "fi": "Finnish",
+  "fj": "Fijian",
+  "fo": "Faroese",
+  "fr": "French",
+  "fy": "West Frisian",
+  "ga": "Irish",
+  "gd": "Scottish Gaelic",
+  "gl": "Galician",
+  "gn": "Guarani",
+  "gu": "Gujarati",
+  "gv": "Manx",
+  "ha": "Hausa",
+  "he": "Hebrew",
+  "hi": "Hindi",
+  "ho": "Hiri Motu",
+  "hr": "Croatian",
+  "ht": "Haitian",
+  "hu": "Hungarian",
+  "hy": "Armenian",
+  "hz": "Herero",
+  "ia": "Interlingua",
+  "id": "Indonesian",
+  "ie": "Interlingue",
+  "ig": "Igbo",
+  "ii": "Sichuan Yi",
+  "ik": "Inupiak",
+  "io": "Ido",
+  "is": "Icelandic",
+  "it": "Italian",
+  "iu": "Inuktitut",
+  "ja": "Japanese",
+  "jv": "Javanese",
+  "ka": "Georgian",
+  "kg": "Kongo",
+  "ki": "Kikuyu",
+  "kj": "Kuanyama",
+  "kk": "Kazakh",
+  "kl": "Greenlandic",
+  "km": "Cambodian",
+  "kn": "Kannada",
+  "ko": "Korean",
+  "kr": "Kanuri",
+  "ks": "Kashmiri",
+  "ku": "Kurdish",
+  "kv": "Komi",
+  "kw": "Cornish",
+  "ky": "Kirghiz",
+  "la": "Latin",
+  "lb": "Luxembourgish",
+  "lg": "Ganda",
+  "li": "Limburgian",
+  "ln": "Lingala",
+  "lo": "Laotian",
+  "lt": "Lithuanian",
+  "lv": "Latvian",
+  "mg": "Malagasy",
+  "mh": "Marshallese",
+  "mi": "Maori",
+  "mk": "Macedonian",
+  "ml": "Malayalam",
+  "mn": "Mongolian",
+  "mo": "Moldovan",
+  "mr": "Marathi",
+  "ms": "Malay",
+  "mt": "Maltese",
+  "my": "Burmese",
+  "na": "Nauruan",
+  "nd": "North Ndebele",
+  "ne": "Nepali",
+  "ng": "Ndonga",
+  "nl": "Dutch",
+  "nn": "Norwegian Nynorsk",
+  "no": "Norwegian",
+  "nr": "South Ndebele",
+  "nv": "Navajo",
+  "ny": "Chichewa",
+  "oc": "Occitan",
+  "oj": "Ojibwa",
+  "om": "Oromo",
+  "or": "Oriya",
+  "os": "Ossetian / Ossetic",
+  "pa": "Panjabi / Punjabi",
+  "pi": "Pali",
+  "pl": "Polish",
+  "ps": "Pashto",
+  "pt": "Portuguese",
+  "qu": "Quechua",
+  "rm": "Raeto Romance",
+  "rn": "Kirundi",
+  "ro": "Romanian",
+  "ru": "Russian",
+  "rw": "Rwandi",
+  "sa": "Sanskrit",
+  "sc": "Sardinian",
+  "sd": "Sindhi",
+  "se": "Northern Sami",
+  "sg": "Sango",
+  "sh": "Serbo-Croatian",
+  "si": "Sinhalese",
+  "sk": "Slovak",
+  "sl": "Slovenian",
+  "sm": "Samoan",
+  "sn": "Shona",
+  "so": "Somalia",
+  "sq": "Albanian",
+  "sr": "Serbian",
+  "ss": "Swati",
+  "st": "Southern Sotho",
+  "su": "Sundanese",
+  "sv": "Swedish",
+  "sw": "Swahili",
+  "ta": "Tamil",
+  "te": "Telugu",
+  "tg": "Tajik",
+  "th": "Thai",
+  "ti": "Tigrinya",
+  "tk": "Turkmen",
+  "tl": "Tagalog / Filipino",
+  "tn": "Tswana",
+  "to": "Tonga",
+  "tr": "Turkish",
+  "ts": "Tsonga",
+  "tt": "Tatar",
+  "tw": "Twi",
+  "ty": "Tahitian",
+  "ug": "Uyghur",
+  "uk": "Ukrainian",
+  "ur": "Urdu",
+  "uz": "Uzbek",
+  "ve": "Venda",
+  "vi": "Vietnamese",
+  "vo": "Volapük",
+  "wa": "Walloon",
+  "wo": "Wolof",
+  "xh": "Xhosa",
+  "yi": "Yiddish",
+  "yo": "Yoruba",
+  "za": "Zhuang",
+  "zh": "Chinese",
+  "zu": "Zulu"
+}
+
+// Arrow navigation
 function arrowNavigation() {
   wLinks = document.getElementsByClassName('wiki')
   selected = 0
@@ -44,8 +232,81 @@ function arrowNavigation() {
       window.scroll(0,document.body.scrollHeight)
     }
   }
+
+  // Listen keys
   body.addEventListener('keydown', navigate)
   body.addEventListener('keyup', navigate)
+}
+
+// Suggest a page in non-English languages
+function suggestLanguages(selection) {
+  body = document.body
+  url = "https://www.wikidata.org/w/api.php?format=json&action=wbgetentities&sites=enwiki|frwiki|eswiki|dewiki&props=sitelinks&titles=" + selection
+  urlString = fetch(url)
+    .then((resp) => resp.json())
+    .then(function(data) {
+      for (i in data.entities) {
+        if (data['entities'][i]['type']){
+
+          // Header
+          languageExplain = document.createElement('div')
+          languageExplain.textContent = "There is no exact page for that in English, but I found it in these languages:"
+          body.appendChild(languageExplain)
+          
+          // Language list
+          languageList = document.createElement('div')
+          languageList.setAttribute('id', 'languagelist')
+          langUl = document.createElement('ul')
+          sitelinks = data['entities'][i]['sitelinks']
+          for (a in sitelinks){
+            if (a.match(/[a-z]{2}wiki$/g) != null) {
+              code = a.substring(0,2)
+              if (langCode[code]) {
+                langLi = document.createElement('li')
+                lang = document.createElement('a')
+                lang.setAttribute('class', 'wiki')
+                lang.textContent = langCode[code]
+                lang.setAttribute('data-code', code)
+                lang.setAttribute('data-title', sitelinks[a]['title'])
+                lang.addEventListener("click", function( event ) {
+                  languageExplain.remove()
+                  languageList.remove()
+                  searchBox.remove()
+                  wikipediaBody(event.target.getAttribute('data-title'), event.target.getAttribute('data-code'))
+                })
+                langLi.appendChild(lang)
+                langUl.appendChild(langLi)
+              }
+            }
+          }
+          languageList.appendChild(langUl)
+          body.appendChild(languageList)
+
+          //Suggest full text search
+          searchBox = document.createElement('div')
+          search = document.createElement('a')
+          search.setAttribute('class', 'wiki')
+          search.textContent = "Or get full text search results in English"
+          search.addEventListener("click", function( event ) {
+            languageExplain.remove()
+            languageList.remove()
+            searchBox.remove()
+            fullSearch(selection, 0)
+          })
+          searchBox.appendChild(search)
+          body.appendChild(searchBox)
+
+          // Arrow navigation
+          arrowNavigation()
+          
+        }}
+      if (document.getElementById('languagelist') == null) {
+        fullSearch(selection, 0)
+      }
+    })
+  if (document.getElementById('focused')) {
+    document.getElementById('focused').remove()
+  }
 }
 
 // Full search
@@ -109,8 +370,10 @@ function fullSearch(selection, pageOffset) {
           rLink.addEventListener("click", function( event ) {
             searchHeader.remove()
             searchResults.remove()
-            nextPage.remove()
-            wikipediaBody(event.target.textContent)
+            if (document.getElementById('nextpage')) {
+              nextPage.remove()
+            }
+            wikipediaBody(event.target.textContent, 'en')
           })
           rSnippet = document.createElement('p')
           snippetText = data['query']['search'][i]['snippet'].split(RegExp('(?:<span class="searchmatch">|</span>)')).join('')
@@ -130,6 +393,7 @@ function fullSearch(selection, pageOffset) {
         pageOffset = pageOffset + 20
         if (pageOffset < hits) {
           nextPage = document.createElement('div')
+          nextPage.setAttribute('id', 'nextpage')
           nextPageLink = document.createElement('a')
           nextPageLink.setAttribute('class', 'wiki')
           nextPageLink.textContent = "Next 20 results"
@@ -146,7 +410,9 @@ function fullSearch(selection, pageOffset) {
         // Arrow navigation
         arrowNavigation()
       }
-      document.getElementById('focused').remove()
+      if (document.getElementById('focused')) {
+        document.getElementById('focused').remove()
+      }
     })
 }
 
@@ -227,7 +493,7 @@ function disambiguate(selection) {
                     // body.removeEventListener('keydown', navigate)
                     // body.removeEventListener('keyup', navigate)
                     suggestions.remove()
-                    wikipediaBody(event.target.textContent)
+                    wikipediaBody(event.target.textContent, 'en')
                   })
                 }
                 candidateDisplay.appendChild(cLink)
@@ -249,7 +515,7 @@ function disambiguate(selection) {
                       // body.removeEventListener('keydown', navigate)
                       // body.removeEventListener('keyup', navigate)
                       suggestions.remove()
-                      wikipediaBody(event.target.textContent)
+                      wikipediaBody(event.target.textContent, 'en')
                     })
                     iNode.appendChild(iLink)
                   } else if (i.nodeType == 3) {
@@ -272,8 +538,9 @@ function disambiguate(selection) {
 
       // Arrow navigation
       arrowNavigation()
-      document.getElementById('focused').remove()
-      
+      if (document.getElementById('focused')) {
+        document.getElementById('focused').remove()
+      }      
     })}
 
 // Get article image
@@ -306,23 +573,23 @@ function wikipediaImage(selection){
 }
 
 // Get article extract
-function wikipediaBody(selection){
+function wikipediaBody(selection, lang){
   
-  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection  
+  url = 'https://' + lang + '.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection
   urlString = fetch(url)
     .then((resp) => resp.json())
     .then(function(data) {
       pageid = data.query.pageids[0]
       if (pageid == '-1') {
 
-        // If there is no page, get full text search results
-        fullSearch(selection, 0)
+        // If there is no page, check other languages
+        suggestLanguages(selection)
       } else if (data['query']['pages'][pageid]['templates']) {
 
         // Display disambiguation pages
         disambiguate(selection)
       } else {
-
+        
         // Display extract
         articleTitle = document.createElement('div')
         articleTitle.setAttribute('id', 'title')
@@ -376,7 +643,7 @@ function noSelection(){
     if (event.keyCode === 13) {
       whatSelection.remove()
       searchBox.setAttribute('style', 'border: none; color: #fbfbfb; background: #fbfbfb;')
-      wikipediaBody(searchBox.value)
+      wikipediaBody(searchBox.value, 'en')
     }
   })
 }
@@ -386,7 +653,7 @@ function messageDo(message) {
   if (selection == ""){
     noSelection()
   } else {
-    wikipediaBody(selection)
+    wikipediaBody(selection, 'en')
   }
 }
 
