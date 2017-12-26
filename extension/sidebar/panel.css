@@ -209,3 +209,28 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+
+#tooltip {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    display: inline-block;
+}
+
+#tooltiptext {
+    color: #fff9ff;
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 120%;
+    border-radius: 2px;
+    position: absolute;
+    z-index: 1;
+    height: 19px;
+    width: 18px;
+    background-size: contain;
+    display: block;
+    padding: 3px 5px;
+    font-size: 16px;
+    background-color: #4a4a4a;
+}

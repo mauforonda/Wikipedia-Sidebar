@@ -538,6 +538,7 @@ function disambiguate(selection) {
 
       // Arrow navigation
       arrowNavigation()
+      
       if (document.getElementById('focused')) {
         document.getElementById('focused').remove()
       }      
@@ -618,6 +619,50 @@ function wikipediaBody(selection, lang){
         if (document.getElementById('focused')) {
           document.getElementById('focused').remove()
         }
+
+        // Search text selections inside extract
+        function makeTooltip() {
+          newSelection = window.getSelection()
+          if (newSelection.toString() != "") {
+
+            // Make tooltip
+            range = newSelection.getRangeAt(0)
+            rect = range.getBoundingClientRect()
+            tooltipHolder = document.createElement('div')
+            tooltipHolder.setAttribute('id', 'tooltip')
+            tooltipTop = rect.top + window.scrollY
+            tooltipHolder.style.top = tooltipTop + 'px'
+            tooltipHolder.style.left = rect.left + 'px'
+            tooltipHolder.style.height = rect.height + 'px'
+            tooltipHolder.style.width = rect.width + 'px'
+            tooltipText = document.createElement('a')
+            tooltipText.textContent = "W"
+            tooltipText.setAttribute('id', 'tooltiptext')
+            tooltipText.setAttribute('data-selection', newSelection.toString())
+            tooltipText.addEventListener("click", function( event ) {
+              articleTitle.remove()
+              separator1.remove()
+              articleBody.remove()
+              separator2.remove()
+              referenceContainer.remove()
+              if (document.getElementById('imagedivdiv')) {
+                document.getElementById('imagedivdiv').remove()
+              }
+              wikipediaBody(event.target.getAttribute('data-selection'), 'en')
+              tooltipHolder.remove()
+            })
+            tooltipHolder.appendChild(tooltipText)
+            if (document.getElementById('tooltip')) {
+              document.getElementById('tooltip').remove()
+            }
+            document.body.appendChild(tooltipHolder)
+          } else {
+            if (document.getElementById('tooltip')) {
+              document.getElementById('tooltip').remove()
+            }
+          }          
+        }
+        articleBody.addEventListener('mouseup', makeTooltip)      
 
         // Get image
         wikipediaImage(selection)
