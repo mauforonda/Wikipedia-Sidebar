@@ -99,7 +99,12 @@ a:hover{
     font-size: 0.9em;
 }
 
-#suggestions{
+.result{
+    padding: 0px;
+    font-size: 0.9em;
+}
+
+#suggestions, #searchresults{
     padding-top: 0px
 }
 
@@ -168,4 +173,33 @@ hr{
 
 #noselection p{
     margin: 10px 0px
+}
+
+.searchmatch{
+    font-weight: bold
+}
+
+.result a{
+    padding: 0px;
+}
+
+.result p{
+    margin: 8px 0px 0px 0px;
+}
+
+#searchheader{
+    padding-bottom: 0px
+}
+
+#searchheader p{
+    padding: 0px
+}
+
+#searchexplain{
+    font-size: 0.9em
+}
+
+#searchcount{
+  font-size: 1em;
+  color: #bfbfbf;      
 }
