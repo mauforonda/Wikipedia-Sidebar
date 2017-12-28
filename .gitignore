@@ -1,1 +1,4 @@
 *.xpi
+package.json
+node_modules/
+.eslintrc.js

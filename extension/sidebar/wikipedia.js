@@ -1,717 +1,754 @@
-// Wikipedia language codes 
-langCode = {
-  "aa": "Afar",
-  "ab": "Abkhazian",
-  "af": "Afrikaans",
-  "ak": "Akan",
-  "am": "Amharic",
-  "an": "Aragonese",
-  "ar": "Arabic",
-  "as": "Assamese",
-  "av": "Avar",
-  "ay": "Aymara",
-  "az": "Azerbaijani",
-  "ba": "Bashkir",
-  "be": "Belarusian",
-  "bg": "Bulgarian",
-  "bh": "Bihari",
-  "bi": "Bislama",
-  "bm": "Bambara",
-  "bn": "Bengali",
-  "bo": "Tibetan",
-  "br": "Breton",
-  "bs": "Bosnian",
-  "ca": "Catalan",
-  "ce": "Chechen",
-  "ch": "Chamorro",
-  "co": "Corsican",
-  "cr": "Cree",
-  "cs": "Czech",
-  "cu": "Old Church Slavonic / Old Bulgarian",
-  "cv": "Chuvash",
-  "cy": "Welsh",
-  "da": "Danish",
-  "de": "German",
-  "dv": "Divehi",
-  "dz": "Dzongkha",
-  "ee": "Ewe",
-  "el": "Greek",
-  "en": "English",
-  "eo": "Esperanto",
-  "es": "Spanish",
-  "et": "Estonian",
-  "eu": "Basque",
-  "fa": "Persian",
-  "ff": "Peul",
-  "fi": "Finnish",
-  "fj": "Fijian",
-  "fo": "Faroese",
-  "fr": "French",
-  "fy": "West Frisian",
-  "ga": "Irish",
-  "gd": "Scottish Gaelic",
-  "gl": "Galician",
-  "gn": "Guarani",
-  "gu": "Gujarati",
-  "gv": "Manx",
-  "ha": "Hausa",
-  "he": "Hebrew",
-  "hi": "Hindi",
-  "ho": "Hiri Motu",
-  "hr": "Croatian",
-  "ht": "Haitian",
-  "hu": "Hungarian",
-  "hy": "Armenian",
-  "hz": "Herero",
-  "ia": "Interlingua",
-  "id": "Indonesian",
-  "ie": "Interlingue",
-  "ig": "Igbo",
-  "ii": "Sichuan Yi",
-  "ik": "Inupiak",
-  "io": "Ido",
-  "is": "Icelandic",
-  "it": "Italian",
-  "iu": "Inuktitut",
-  "ja": "Japanese",
-  "jv": "Javanese",
-  "ka": "Georgian",
-  "kg": "Kongo",
-  "ki": "Kikuyu",
-  "kj": "Kuanyama",
-  "kk": "Kazakh",
-  "kl": "Greenlandic",
-  "km": "Cambodian",
-  "kn": "Kannada",
-  "ko": "Korean",
-  "kr": "Kanuri",
-  "ks": "Kashmiri",
-  "ku": "Kurdish",
-  "kv": "Komi",
-  "kw": "Cornish",
-  "ky": "Kirghiz",
-  "la": "Latin",
-  "lb": "Luxembourgish",
-  "lg": "Ganda",
-  "li": "Limburgian",
-  "ln": "Lingala",
-  "lo": "Laotian",
-  "lt": "Lithuanian",
-  "lv": "Latvian",
-  "mg": "Malagasy",
-  "mh": "Marshallese",
-  "mi": "Maori",
-  "mk": "Macedonian",
-  "ml": "Malayalam",
-  "mn": "Mongolian",
-  "mo": "Moldovan",
-  "mr": "Marathi",
-  "ms": "Malay",
-  "mt": "Maltese",
-  "my": "Burmese",
-  "na": "Nauruan",
-  "nd": "North Ndebele",
-  "ne": "Nepali",
-  "ng": "Ndonga",
-  "nl": "Dutch",
-  "nn": "Norwegian Nynorsk",
-  "no": "Norwegian",
-  "nr": "South Ndebele",
-  "nv": "Navajo",
-  "ny": "Chichewa",
-  "oc": "Occitan",
-  "oj": "Ojibwa",
-  "om": "Oromo",
-  "or": "Oriya",
-  "os": "Ossetian / Ossetic",
-  "pa": "Panjabi / Punjabi",
-  "pi": "Pali",
-  "pl": "Polish",
-  "ps": "Pashto",
-  "pt": "Portuguese",
-  "qu": "Quechua",
-  "rm": "Raeto Romance",
-  "rn": "Kirundi",
-  "ro": "Romanian",
-  "ru": "Russian",
-  "rw": "Rwandi",
-  "sa": "Sanskrit",
-  "sc": "Sardinian",
-  "sd": "Sindhi",
-  "se": "Northern Sami",
-  "sg": "Sango",
-  "sh": "Serbo-Croatian",
-  "si": "Sinhalese",
-  "sk": "Slovak",
-  "sl": "Slovenian",
-  "sm": "Samoan",
-  "sn": "Shona",
-  "so": "Somalia",
-  "sq": "Albanian",
-  "sr": "Serbian",
-  "ss": "Swati",
-  "st": "Southern Sotho",
-  "su": "Sundanese",
-  "sv": "Swedish",
-  "sw": "Swahili",
-  "ta": "Tamil",
-  "te": "Telugu",
-  "tg": "Tajik",
-  "th": "Thai",
-  "ti": "Tigrinya",
-  "tk": "Turkmen",
-  "tl": "Tagalog / Filipino",
-  "tn": "Tswana",
-  "to": "Tonga",
-  "tr": "Turkish",
-  "ts": "Tsonga",
-  "tt": "Tatar",
-  "tw": "Twi",
-  "ty": "Tahitian",
-  "ug": "Uyghur",
-  "uk": "Ukrainian",
-  "ur": "Urdu",
-  "uz": "Uzbek",
-  "ve": "Venda",
-  "vi": "Vietnamese",
-  "vo": "Volapük",
-  "wa": "Walloon",
-  "wo": "Wolof",
-  "xh": "Xhosa",
-  "yi": "Yiddish",
-  "yo": "Yoruba",
-  "za": "Zhuang",
-  "zh": "Chinese",
-  "zu": "Zulu"
-}
+/* global browser, window, document, DOMParser, fetch:false */
 
 // Arrow navigation
-function arrowNavigation() {
-  wLinks = document.getElementsByClassName('wiki')
-  selected = 0
-  wLinks[selected].classList.add('selected')
-  var map = {}      
-  function navigate(e) {
-    e.preventDefault()
-    map[e.keyCode] = e.type == 'keydown'
-    
-    // Enter
-    if(map[13]){
-      wLinks[selected].click()
-      body.removeEventListener('keydown', navigate)
-      body.removeEventListener('keyup', navigate)
-      
-      // Up          
-    } else if(map[38]) {
+const navigation = function keyboardNavigation() {
+  // All .navigable elements are navigable
+  const links = document.getElementsByClassName('navigable');
+
+  // Select the first navigable element
+  let selected = 0;
+  links[selected].classList.add('selected');
+
+  // Rules for key events, including key combinations
+  const map = {};
+  function rules(e) {
+    e.preventDefault();
+    map[e.keyCode] = e.type === 'keydown';
+
+    // Enter: trigger a click event
+    if (map[13]) {
+      links[selected].click();
+      document.body.removeEventListener('keydown', rules);
+      document.body.removeEventListener('keyup', rules);
+
+      // Up: select the previous navigable element
+    } else if (map[38]) {
       if (selected > 0) {
-        wLinks[selected].classList.remove('selected')
-        selected--
-        wLinks[selected].classList.add('selected')
-        wLinks[selected].scrollIntoView({behavior: "instant", block: "nearest"})
+        links[selected].classList.remove('selected');
+        selected -= 1;
+        links[selected].classList.add('selected');
+        links[selected].scrollIntoView({
+          behavior: 'instant',
+          block: 'nearest',
+        });
       }
-      
-      // Down
+
+      // Down: select the next navigable element
     } else if (map[40]) {
-      if (selected < wLinks.length - 1) {
-        wLinks[selected].classList.remove('selected')
-        selected++
-        wLinks[selected].classList.add('selected')
-        wLinks[selected].scrollIntoView({behavior: "instant", block: "nearest"})
+      if (selected < links.length - 1) {
+        links[selected].classList.remove('selected');
+        selected += 1;
+        links[selected].classList.add('selected');
+        links[selected].scrollIntoView({ behavior: 'instant', block: 'nearest' });
       }
-      
-      // Ctrl+Shift+V
+
+      // Ctrl+Shift+V: close the sidebar
     } else if (map[17] && map[16] && map[86]) {
-      browser.sidebarAction.close()
+      browser.sidebarAction.close();
 
-      // Home
+      // Home: scroll to the top
     } else if (map[36]) {
-      window.scroll(0,0)
+      window.scroll(0, 0);
 
-      // End
+      // End: scroll to the bottom
     } else if (map[35]) {
-      window.scroll(0,document.body.scrollHeight)
+      window.scroll(0, document.body.scrollHeight);
     }
   }
 
-  // Listen keys
-  body.addEventListener('keydown', navigate)
-  body.addEventListener('keyup', navigate)
-}
+  // Listen to key events
+  document.body.addEventListener('keydown', rules);
+  document.body.addEventListener('keyup', rules);
+};
 
 // Suggest a page in non-English languages
-function suggestLanguages(selection) {
-  body = document.body
-  url = "https://www.wikidata.org/w/api.php?format=json&action=wbgetentities&sites=enwiki|frwiki|eswiki|dewiki&props=sitelinks&titles=" + selection
-  urlString = fetch(url)
-    .then((resp) => resp.json())
-    .then(function(data) {
-      for (i in data.entities) {
-        if (data['entities'][i]['type']){
+const languages = function checkNonEnglishPages(keywords) {
+  // Wikipedia language codes
+  const codes = {
+    aa: 'Afar',
+    ab: 'Abkhazian',
+    af: 'Afrikaans',
+    ak: 'Akan',
+    am: 'Amharic',
+    an: 'Aragonese',
+    ar: 'Arabic',
+    as: 'Assamese',
+    av: 'Avar',
+    ay: 'Aymara',
+    az: 'Azerbaijani',
+    ba: 'Bashkir',
+    be: 'Belarusian',
+    bg: 'Bulgarian',
+    bh: 'Bihari',
+    bi: 'Bislama',
+    bm: 'Bambara',
+    bn: 'Bengali',
+    bo: 'Tibetan',
+    br: 'Breton',
+    bs: 'Bosnian',
+    ca: 'Catalan',
+    ce: 'Chechen',
+    ch: 'Chamorro',
+    co: 'Corsican',
+    cr: 'Cree',
+    cs: 'Czech',
+    cu: 'Old Church Slavonic / Old Bulgarian',
+    cv: 'Chuvash',
+    cy: 'Welsh',
+    da: 'Danish',
+    de: 'German',
+    dv: 'Divehi',
+    dz: 'Dzongkha',
+    ee: 'Ewe',
+    el: 'Greek',
+    en: 'English',
+    eo: 'Esperanto',
+    es: 'Spanish',
+    et: 'Estonian',
+    eu: 'Basque',
+    fa: 'Persian',
+    ff: 'Peul',
+    fi: 'Finnish',
+    fj: 'Fijian',
+    fo: 'Faroese',
+    fr: 'French',
+    fy: 'West Frisian',
+    ga: 'Irish',
+    gd: 'Scottish Gaelic',
+    gl: 'Galician',
+    gn: 'Guarani',
+    gu: 'Gujarati',
+    gv: 'Manx',
+    ha: 'Hausa',
+    he: 'Hebrew',
+    hi: 'Hindi',
+    ho: 'Hiri Motu',
+    hr: 'Croatian',
+    ht: 'Haitian',
+    hu: 'Hungarian',
+    hy: 'Armenian',
+    hz: 'Herero',
+    ia: 'Interlingua',
+    id: 'Indonesian',
+    ie: 'Interlingue',
+    ig: 'Igbo',
+    ii: 'Sichuan Yi',
+    ik: 'Inupiak',
+    io: 'Ido',
+    is: 'Icelandic',
+    it: 'Italian',
+    iu: 'Inuktitut',
+    ja: 'Japanese',
+    jv: 'Javanese',
+    ka: 'Georgian',
+    kg: 'Kongo',
+    ki: 'Kikuyu',
+    kj: 'Kuanyama',
+    kk: 'Kazakh',
+    kl: 'Greenlandic',
+    km: 'Cambodian',
+    kn: 'Kannada',
+    ko: 'Korean',
+    kr: 'Kanuri',
+    ks: 'Kashmiri',
+    ku: 'Kurdish',
+    kv: 'Komi',
+    kw: 'Cornish',
+    ky: 'Kirghiz',
+    la: 'Latin',
+    lb: 'Luxembourgish',
+    lg: 'Ganda',
+    li: 'Limburgian',
+    ln: 'Lingala',
+    lo: 'Laotian',
+    lt: 'Lithuanian',
+    lv: 'Latvian',
+    mg: 'Malagasy',
+    mh: 'Marshallese',
+    mi: 'Maori',
+    mk: 'Macedonian',
+    ml: 'Malayalam',
+    mn: 'Mongolian',
+    mo: 'Moldovan',
+    mr: 'Marathi',
+    ms: 'Malay',
+    mt: 'Maltese',
+    my: 'Burmese',
+    na: 'Nauruan',
+    nd: 'North Ndebele',
+    ne: 'Nepali',
+    ng: 'Ndonga',
+    nl: 'Dutch',
+    nn: 'Norwegian Nynorsk',
+    no: 'Norwegian',
+    nr: 'South Ndebele',
+    nv: 'Navajo',
+    ny: 'Chichewa',
+    oc: 'Occitan',
+    oj: 'Ojibwa',
+    om: 'Oromo',
+    or: 'Oriya',
+    os: 'Ossetian / Ossetic',
+    pa: 'Panjabi / Punjabi',
+    pi: 'Pali',
+    pl: 'Polish',
+    ps: 'Pashto',
+    pt: 'Portuguese',
+    qu: 'Quechua',
+    rm: 'Raeto Romance',
+    rn: 'Kirundi',
+    ro: 'Romanian',
+    ru: 'Russian',
+    rw: 'Rwandi',
+    sa: 'Sanskrit',
+    sc: 'Sardinian',
+    sd: 'Sindhi',
+    se: 'Northern Sami',
+    sg: 'Sango',
+    sh: 'Serbo-Croatian',
+    si: 'Sinhalese',
+    sk: 'Slovak',
+    sl: 'Slovenian',
+    sm: 'Samoan',
+    sn: 'Shona',
+    so: 'Somalia',
+    sq: 'Albanian',
+    sr: 'Serbian',
+    ss: 'Swati',
+    st: 'Southern Sotho',
+    su: 'Sundanese',
+    sv: 'Swedish',
+    sw: 'Swahili',
+    ta: 'Tamil',
+    te: 'Telugu',
+    tg: 'Tajik',
+    th: 'Thai',
+    ti: 'Tigrinya',
+    tk: 'Turkmen',
+    tl: 'Tagalog / Filipino',
+    tn: 'Tswana',
+    to: 'Tonga',
+    tr: 'Turkish',
+    ts: 'Tsonga',
+    tt: 'Tatar',
+    tw: 'Twi',
+    ty: 'Tahitian',
+    ug: 'Uyghur',
+    uk: 'Ukrainian',
+    ur: 'Urdu',
+    uz: 'Uzbek',
+    ve: 'Venda',
+    vi: 'Vietnamese',
+    vo: 'Volapük',
+    wa: 'Walloon',
+    wo: 'Wolof',
+    xh: 'Xhosa',
+    yi: 'Yiddish',
+    yo: 'Yoruba',
+    za: 'Zhuang',
+    zh: 'Chinese',
+    zu: 'Zulu',
+  };
 
+  const url = `https://www.wikidata.org/w/api.php?format=json&action=wbgetentities&sites=enwiki|frwiki|eswiki|dewiki&props=sitelinks&titles=${keywords}`;
+  fetch(url)
+    .then(resp => resp.json())
+    .then((data) => {
+      Object.keys(data.entities).forEach((entity) => {
+        if (data.entities[entity].type) {
           // Header
-          languageExplain = document.createElement('div')
-          languageExplain.textContent = "There is no exact page for that in English, but I found it in these languages:"
-          body.appendChild(languageExplain)
-          
+          const explain = document.createElement('div');
+          explain.className = 'small';
+          explain.textContent = 'There is no exact page for that in English, but I found it in these languages:';
+          document.body.appendChild(explain);
+
           // Language list
-          languageList = document.createElement('div')
-          languageList.setAttribute('id', 'languagelist')
-          langUl = document.createElement('ul')
-          sitelinks = data['entities'][i]['sitelinks']
-          for (a in sitelinks){
-            if (a.match(/[a-z]{2}wiki$/g) != null) {
-              code = a.substring(0,2)
-              if (langCode[code]) {
-                langLi = document.createElement('li')
-                lang = document.createElement('a')
-                lang.setAttribute('class', 'wiki')
-                lang.textContent = langCode[code]
-                lang.setAttribute('data-code', code)
-                lang.setAttribute('data-title', sitelinks[a]['title'])
-                lang.addEventListener("click", function( event ) {
-                  languageExplain.remove()
-                  languageList.remove()
-                  searchBox.remove()
-                  wikipediaBody(event.target.getAttribute('data-title'), event.target.getAttribute('data-code'))
-                })
-                langLi.appendChild(lang)
-                langUl.appendChild(langLi)
+          const container = document.createElement('div');
+          container.className = 'middle';
+          container.setAttribute('id', 'languages');
+          const list = document.createElement('ul');
+          const sitelinks = data.entities[entity].sitelinks;
+          Object.keys(sitelinks).forEach((sitelink) => {
+            if (sitelink.match(/[a-z]{2}wiki$/g) != null) {
+              const c = sitelink.substring(0, 2);
+              if (codes[c]) {
+                const item = document.createElement('li');
+                const language = document.createElement('a');
+                language.className = 'navigable';
+                language.textContent = codes[c];
+                language.setAttribute(
+                  'data-code',
+                  c,
+                );
+                language.setAttribute(
+                  'data-title',
+                  sitelinks[sitelink].title,
+                );
+                language.addEventListener(
+                  'click',
+                  (event) => {
+                    explain.remove();
+                    container.remove();
+                    search.remove();
+                    extract(
+                      event.target.getAttribute('data-title'),
+                      event.target.getAttribute('data-code'),
+                    );
+                  },
+                );
+                item.appendChild(language);
+                list.appendChild(item);
               }
             }
-          }
-          languageList.appendChild(langUl)
-          body.appendChild(languageList)
+          });
+          container.appendChild(list);
+          document.body.appendChild(container);
 
-          //Suggest full text search
-          searchBox = document.createElement('div')
-          search = document.createElement('a')
-          search.setAttribute('class', 'wiki')
-          search.textContent = "Or get full text search results in English"
-          search.addEventListener("click", function( event ) {
-            languageExplain.remove()
-            languageList.remove()
-            searchBox.remove()
-            fullSearch(selection, 0)
-          })
-          searchBox.appendChild(search)
-          body.appendChild(searchBox)
+          // Suggest full text search
+          const search = document.createElement('div');
+          const get = document.createElement('a');
+          get.setAttribute('class', 'navigable');
+          get.textContent = 'Or get full text search results in English';
+          get.addEventListener('click', () => {
+            explain.remove();
+            container.remove();
+            search.remove();
+            fulltext(keywords, 0);
+          });
+          search.appendChild(get);
+          document.body.appendChild(search);
 
           // Arrow navigation
-          arrowNavigation()
-          
-        }}
-      if (document.getElementById('languagelist') == null) {
-        fullSearch(selection, 0)
+          navigation();
+        }
+      });
+      if (document.getElementById('languages') == null) {
+        fulltext(keywords, 0);
       }
-    })
-  if (document.getElementById('focused')) {
-    document.getElementById('focused').remove()
+    });
+  if (document.getElementsByTagName('INPUT')[0]) {
+    document.getElementsByTagName('INPUT')[0].remove();
   }
-}
+};
 
-// Full search
-function fullSearch(selection, pageOffset) {
-  body = document.body
-  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&list=search&srlimit=20&srprop=snippet&sroffset='+pageOffset+'&srsearch='+selection
-  urlString = fetch(url)
-    .then((resp) => resp.json())
-    .then(function(data) {
-      hits = data.query.searchinfo.totalhits
+  // Full search
+const fulltext = function checkFullTextSearchResults(keywords, offset) {
+  const url = `https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&list=search&srlimit=20&srprop=snippet&sroffset=${offset}&srsearch=${keywords}`;
+  fetch(url)
+    .then(resp => resp.json())
+    .then((data) => {
+      const totalhits = data.query.searchinfo.totalhits;
 
       // No search result
-      if (hits == 0) {
-        
+      if (totalhits === 0) {
         // Follow suggested search terms
-        if (data.query.searchinfo.suggestion) {
-          fullSearch(data.query.searchinfo.suggestion, 0)
-          
+        const suggestion = data.query.searchinfo.suggestion;
+        if (suggestion) {
+          fulltext(suggestion, 0);
+
           // No suggestions
         } else {
-        noArticle = document.createElement('div')
-        noArticle.setAttribute('id', 'noarticle')
-        noArticle.textContent = "Couldn't find a page or search results for that"
-          body.appendChild(noArticle)
+          const nothing = document.createElement('div');
+          nothing.setAttribute('id', 'nothing');
+          nothing.textContent = "Couldn't find a page or search results for that";
+          document.body.appendChild(nothing);
         }
       } else {
-        
         // Search header
-        searchHeader = document.createElement('div')
-        searchHeader.setAttribute('id', 'searchheader')
-        if (pageOffset == 0) {
-          searchHeader1 = document.createTextNode("There's no exact page for that, but I found ")
-          searchHeaderHits = document.createElement('b')
-          searchHeaderHits.textContent = String(hits)
-          searchHeader2 = document.createTextNode(' search results on Wikipedia.')
-          searchHeaderp1 = document.createElement('p')
-          searchHeaderp1.setAttribute('id', 'searchexplain')
-          searchHeaderp1.appendChild(searchHeader1)
-          searchHeaderp1.appendChild(searchHeaderHits)
-          searchHeaderp1.appendChild(searchHeader2)
-          searchHeader.appendChild(searchHeaderp1)
+        const intro = document.createElement('div');
+        intro.className = 'intro';
+        if (offset === 0) {
+          const text1 = document.createTextNode("There's no exact page for that, but I found ");
+          const bold = document.createElement('b');
+          bold.textContent = String(totalhits);
+          const text2 = document.createTextNode(' search results on Wikipedia.');
+          const explain = document.createElement('p');
+          explain.className = 'small';
+          explain.appendChild(text1);
+          explain.appendChild(bold);
+          explain.appendChild(text2);
+          intro.appendChild(explain);
         }
-        searchHeaderp2 = document.createElement('p')
-        searchHeaderp2.setAttribute('id', 'searchcount')
-        if (hits  < pageOffset + 20 ) {
-          searchHeaderp2.textContent = "Results " + String(pageOffset) + " to " +  String(hits) + ":"
+        const count = document.createElement('p');
+        if (totalhits < offset + 20) {
+          count.textContent = `Results ${String(offset)} to ${String(totalhits)}:`;
         } else {
-          searchHeaderp2.textContent = "Results " + String(pageOffset) + " to " + String(pageOffset + 20) + ":"
+          count.textContent = `Results ${String(offset)} to ${String(offset + 20)}:`;
         }
-        searchHeader.appendChild(searchHeaderp2)
-        
+        intro.appendChild(count);
+
         // Search results
-        searchResults = document.createElement('div')
-        searchResults.setAttribute('id', 'searchresults')
-        for (i = 0 ; i < data.query.search.length ; i++){
-          result = document.createElement('div')
-          result.setAttribute('class', 'result')
-          rLink = document.createElement('a')
-          rLink.setAttribute('class', 'wiki')
-          rLink.textContent = data['query']['search'][i]['title']
-          rLink.addEventListener("click", function( event ) {
-            searchHeader.remove()
-            searchResults.remove()
-            if (document.getElementById('nextpage')) {
-              nextPage.remove()
+        const results = document.createElement('div');
+        results.className = 'middle';
+        for (let r = 0; r < data.query.search.length; r += 1) {
+          const result = document.createElement('div');
+          result.className = 'small simple';
+          const link = document.createElement('a');
+          link.className = 'navigable simple';
+          link.textContent = data.query.search[r].title;
+          link.addEventListener('click', (event) => {
+            intro.remove();
+            results.remove();
+            if (document.getElementById('next')) {
+              document.getElementById('next').remove();
             }
-            wikipediaBody(event.target.textContent, 'en')
-          })
-          rSnippet = document.createElement('p')
-          snippetText = data['query']['search'][i]['snippet'].split(RegExp('(?:<span class="searchmatch">|</span>)')).join('')
-          rSnippet.textContent = snippetText
-          hr =  document.createElement('hr')
-          result.appendChild(rLink)
-          result.appendChild(rSnippet)
-          searchResults.appendChild(hr)
-          searchResults.appendChild(result)
+            extract(event.target.textContent);
+          });
+          const snippet = document.createElement('p');
+          snippet.className = 'snippet';
+          const plainsnippet = data.query.search[r].snippet.split(RegExp('(?:<span class="searchmatch">|</span>)')).join('');
+          snippet.textContent = plainsnippet;
+          const separator = document.createElement('hr');
+          result.appendChild(link);
+          result.appendChild(snippet);
+          results.appendChild(separator);
+          results.appendChild(result);
         }
 
         // Display header and results
-        body.appendChild(searchHeader)
-        body.appendChild(searchResults)
+        document.body.appendChild(intro);
+        document.body.appendChild(results);
 
         // Next page
-        pageOffset = pageOffset + 20
-        if (pageOffset < hits) {
-          nextPage = document.createElement('div')
-          nextPage.setAttribute('id', 'nextpage')
-          nextPageLink = document.createElement('a')
-          nextPageLink.setAttribute('class', 'wiki')
-          nextPageLink.textContent = "Next 20 results"
-          nextPageLink.addEventListener('click', function(event) {
-            searchHeader.remove()
-            searchResults.remove()
-            nextPage.remove()
-            fullSearch(selection, pageOffset)
-          })
-          nextPage.appendChild(nextPageLink)
-          body.appendChild(nextPage)
+        const newoffset = offset + 20;
+        if (newoffset < totalhits) {
+          const next = document.createElement('div');
+          next.setAttribute('id', 'next');
+          const link = document.createElement('a');
+          link.className = 'navigable';
+          link.textContent = 'Next 20 results';
+          link.addEventListener(
+            'click',
+            () => {
+              intro.remove();
+              results.remove();
+              next.remove();
+              fulltext(keywords, offset);
+            },
+          );
+          next.appendChild(link);
+          document.body.appendChild(next);
         }
 
         // Arrow navigation
-        arrowNavigation()
+        navigation();
       }
-      if (document.getElementById('focused')) {
-        document.getElementById('focused').remove()
-      }
-    })
-}
 
-// Disambiguation
-function disambiguate(selection) {
-  
-  body = document.body
-  
+      if (document.getElementsByTagName('INPUT')[0]) {
+        document.getElementsByTagName('INPUT')[0].remove();
+      }
+    });
+};
+
+  // Disambiguation
+function disambiguate(keywords) {
   // Fetch HTML page
-  url = 'https://en.wikipedia.org/wiki/' +  selection
-  urlString = fetch(url)
-    .then((resp) => resp.text())
-    .then(function(data) {
-      parser = new DOMParser()
-      doc = parser.parseFromString(data, "text/html")
-      
-      // Put everything under suggestions
-      suggestions = document.createElement('div')
-      suggestions.setAttribute('id', 'suggestions')
+  const url = `https://en.wikipedia.org/wiki/${keywords}`;
+  fetch(url)
+    .then(resp => resp.text())
+    .then((data) => {
+      const parser = new DOMParser();
+      const page = parser.parseFromString(data, 'text/html');
 
       // Make introduction line
-      intro = document.createElement('div')
-      intro.setAttribute('id', 'intro')
-      introSelection = document.createElement('b')
-      introSelection.textContent = selection
-      introRest = document.createTextNode(' may refer to:')
-      intro.appendChild(introSelection)
-      intro.appendChild(introRest)
-      suggestions.appendChild(intro)
+      const explain = document.createElement('div');
+      explain.className = 'small intro';
+      const bold = document.createElement('b');
+      bold.textContent = keywords;
+      const text1 = document.createTextNode(' may refer to:');
+      explain.appendChild(bold);
+      explain.appendChild(text1);
+      document.body.appendChild(explain);
+
+      const createcandidate = function createCandidateElement(item) {
+        const candidate = document.createElement('p');
+        candidate.className = 'candidate';
+        item.childNodes.forEach((c) => {
+          // Make candidate links
+          if (c.tagName === 'A') {
+            if (c.getAttribute('class') === 'external text') {
+              const link = document.createElement('a');
+              link.setAttribute('href', c.getAttribute('href'));
+              link.className = 'external';
+              link.textContent = c.textContent;
+              candidate.appendChild(link);
+            } else if (c.getAttribute('class') === 'new') {
+              const link = document.createTextNode(c.textContent);
+              candidate.appendChild(link);
+            } else {
+              const link = document.createElement('a');
+              link.setAttribute('class', 'navigable');
+              link.textContent = c.getAttribute('title');
+              link.addEventListener(
+                'click',
+                (event) => {
+                  explain.remove();
+                  container.remove();
+                  extract(event.target.textContent);
+                },
+              );
+              candidate.appendChild(link);
+            }
+
+            // Make candidate text
+          } else if (c.nodeType === 3) {
+            const text2 = document.createTextNode(c.textContent);
+            candidate.appendChild(text2);
+
+            // Make candidate italic links and text
+          } else if (c.tagName === 'I') {
+            const italic = document.createElement('i');
+            c.childNodes.forEach((i) => {
+              if (i.tagName === 'A') {
+                const link = document.createElement('a');
+                link.setAttribute('class', 'navigable');
+                link.textContent = i.getAttribute('title');
+                link.addEventListener(
+                  'click',
+                  (event) => {
+                    explain.remove();
+                    container.remove();
+                    extract(event.target.textContent);
+                  },
+                );
+                italic.appendChild(link);
+              } else if (i.nodeType === 3) {
+                const text = document.createTextNode(i.textContent);
+                italic.appendChild(text);
+              }
+            });
+            candidate.appendChild(italic);
+          }
+        });
+
+        // Put everything together
+        container.appendChild(candidate);
+      };
 
       // Get all relevant nodes
-      mwparser = doc.querySelector('.mw-parser-output')
-      candidateNodes = mwparser.querySelectorAll(':scope > ul, :scope > h2, :scope > dl')
-      for (i = 0; i < candidateNodes.length; i++){
-
+      const mwparser = page.querySelector('.mw-parser-output');
+      const nodes = mwparser.querySelectorAll(':scope > ul, :scope > h2, :scope > dl');
+      const container = document.createElement('div');
+      container.className = 'middle';
+      for (let node = 0; node < nodes.length; node += 1) {
         // Make a domain section
-        if (candidateNodes[i].tagName == 'H2') {
-          separator = document.createElement('hr')
-          suggestions.appendChild(separator)
-          sectionNode = candidateNodes[i].querySelector('.mw-headline')
-          section = document.createElement('div')
-          section.setAttribute('class', 'domain')
-          section.textContent = sectionNode.textContent
-          suggestions.appendChild(section)
+        if (nodes[node].tagName === 'H2') {
+          const separator = document.createElement('hr');
+          const domain = document.createElement('div');
+          domain.className = 'section';
+          domain.textContent = nodes[node].querySelector('.mw-headline').textContent;
+          container.appendChild(separator);
+          container.appendChild(domain);
 
           // Make a similar word section
-        } else if (candidateNodes[i].tagName == 'DL') {
-          separator = document.createElement('hr')
-          suggestions.appendChild(separator)
-          section = document.createElement('div')
-          section.setAttribute('class', 'similar')
-          section.textContent = candidateNodes[i].textContent
-          suggestions.appendChild(section)
+        } else if (nodes[node].tagName === 'DL') {
+          const separator = document.createElement('hr');
+          const similar = document.createElement('div');
+          similar.className = 'section';
+          similar.textContent = nodes[node].textContent;
+          container.appendChild(separator);
+          container.appendChild(similar);
 
           // Make disambiguation candidates
         } else {
-          candidateNodes[i].querySelectorAll('li').forEach((candidate) => {
-
-            // Put a candidate's nodes under candidateDisplay
-            candidateDisplay = document.createElement('p')
-            candidateDisplay.setAttribute('class', 'candidate')
-            candidate.childNodes.forEach((c) => {
-
-              // Make candidate links
-              if (c.tagName == 'A') {
-                if (c.getAttribute('class') == 'external text') {
-                  cLink = document.createElement('a')
-                  cLink.setAttribute('href', c.getAttribute('href'))
-                  cLink.setAttribute('class', 'external')
-                  cLink.textContent = c.textContent
-                } else if (c.getAttribute('class') == 'new') {
-                  cLink = document.createTextNode(c.textContent)
-                } else {
-                  cLink = document.createElement('a')
-                  cLink.setAttribute('class', 'wiki')
-                  cLink.textContent = c.getAttribute('title')
-                  cLink.addEventListener("click", function( event ) {
-                    // body.removeEventListener('keydown', navigate)
-                    // body.removeEventListener('keyup', navigate)
-                    suggestions.remove()
-                    wikipediaBody(event.target.textContent, 'en')
-                  })
-                }
-                candidateDisplay.appendChild(cLink)
-
-                // Make candidate text
-              } else if (c.nodeType == 3) {
-                cText = document.createTextNode(c.textContent)
-                candidateDisplay.appendChild(cText)
-
-                // Make candidate italic links and text
-              } else if (c.tagName == 'I') {
-                iNode = document.createElement('i')
-                c.childNodes.forEach((i) => {
-                  if (i.tagName == 'A') {
-                    iLink = document.createElement('a')
-                    iLink.setAttribute('class', 'wiki')
-                    iLink.textContent = i.getAttribute('title')
-                    iLink.addEventListener("click", function( event ) {
-                      // body.removeEventListener('keydown', navigate)
-                      // body.removeEventListener('keyup', navigate)
-                      suggestions.remove()
-                      wikipediaBody(event.target.textContent, 'en')
-                    })
-                    iNode.appendChild(iLink)
-                  } else if (i.nodeType == 3) {
-                    iText = document.createTextNode(i.textContent)
-                    iNode.appendChild(iText)
-
-                  }
-                })
-                candidateDisplay.appendChild(iNode)
-              }
-            })
-
-            // Put everything together
-            suggestions.appendChild(candidateDisplay)
-          })
-        }}
+          nodes[node].querySelectorAll('li').forEach(item => createcandidate(item));
+        }
+      }
 
       // Display
-      body.appendChild(suggestions)
+      document.body.appendChild(container);
 
       // Arrow navigation
-      arrowNavigation()
-      
-      if (document.getElementById('focused')) {
-        document.getElementById('focused').remove()
-      }      
-    })}
+      navigation();
 
-// Get article image
-function wikipediaImage(selection){
-  url = 'https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=pageimages&pithumbsize=360&titles=' + selection
-  urlString = fetch(url)
-    .then((resp) => resp.json())
-    .then(function(data) {
-      pageid = data.query.pageids[0]
-      if (pageid != '-1' && data['query']['pages'][pageid]['thumbnail'] != undefined) {
-        imagediv = document.createElement('div')
-        imagediv.setAttribute('id', 'imagediv')
-        imagedivdiv = document.createElement('div')
-        imagedivdiv.setAttribute('id', 'imagedivdiv')
-        imageback = document.createElement('div')
-        imageback.setAttribute('id', 'imgback')
-        articleImage = document.createElement('img')
-        articleImage.setAttribute('id', 'articleimg')
-        articleImage.setAttribute('src', data['query']['pages'][pageid]['thumbnail']['source'])
-        articleImage.setAttribute('alt', data['query']['pages'][pageid]['title'])
-        articleImage.addEventListener('load', function(e) {imagedivdiv.setAttribute('style', 'background: linear-gradient(to bottom, transparent, #0a0415cc)')})
-        imagediv.appendChild(imageback)
-        imagediv.appendChild(articleImage)
-        imagedivdiv.appendChild(imagediv)
-        body = document.body
-        articleTitle = document.getElementById('title')
-        body.insertBefore(imagedivdiv, articleTitle)
+      if (document.getElementsByTagName('INPUT')[0]) {
+        document.getElementsByTagName('INPUT')[0].remove();
       }
-    })
+    });
 }
 
-// Get article extract
-function wikipediaBody(selection, lang){
-  
-  url = 'https://' + lang + '.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=' + selection
-  urlString = fetch(url)
-    .then((resp) => resp.json())
-    .then(function(data) {
-      pageid = data.query.pageids[0]
-      if (pageid == '-1') {
+// Get article image
+const thumbnail = function getWikipediaThumbnail(keywords) {
+  const url = `https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=pageimages&pithumbsize=360&titles=${keywords}`;
+  fetch(url)
+    .then(resp => resp.json())
+    .then((data) => {
+      const pageid = data.query.pageids[0];
+      if (pageid !== '-1' && data.query.pages[pageid].thumbnail !== undefined) {
+        const container = document.createElement('div');
+        const supercontainer = document.createElement('div');
+        const back = document.createElement('div');
+        const image = document.createElement('img');
+        container.className = 'simple imagecontainer';
+        supercontainer.className = 'simple imagecontainer imgsupercontain';
+        back.className = 'imgback';
+        image.setAttribute(
+          'id',
+          'articleimg',
+        );
+        image.setAttribute(
+          'src',
+          data.query.pages[pageid].thumbnail.source,
+        );
+        image.setAttribute(
+          'alt',
+          data.query.pages[pageid].title,
+        );
+        image.addEventListener(
+          'load',
+          () => {
+            supercontainer.setAttribute('style', 'background: linear-gradient(to bottom, transparent, #0a0415cc)');
+          },
+        );
+        container.appendChild(back);
+        container.appendChild(image);
+        supercontainer.appendChild(container);
+        const title = document.getElementsByClassName('title')[0];
+        document.body.insertBefore(supercontainer, title);
+      }
+    });
+};
 
+  // Get article extract
+const extract = function getWikipediaExtract(
+  keywords,
+  lang = 'en',
+) {
+  const url = `https://${lang}.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&prop=extracts|templates&exintro=&explaintext=&tltemplates=Template:Disambiguation|Template:Dmbox|Template:Biology_disambiguation|Template:Call_sign_disambiguation|Template:Caselaw_disambiguation|Template:Chinese_title_disambiguation|Template:Disambiguation_cleanup|Template:Genus_disambiguation|Template:Hospital_disambiguation|Template:Human_name_disambiguation|Template:Human_name_disambiguation_cleanup|Template:Letter_disambiguation|Template:Letter-Number_Combination_Disambiguation|Template:Mathematical_disambiguation|Template:Mil-unit-dis|Template:Number_disambiguation|Template:Phonetics_disambiguation|Template:Place_name_disambiguation|Template:Road_disambiguation|Template:School_disambiguation|Template:Species_Latin_name_abbreviation_disambiguation|Template:Species_Latin_name_disambiguation|Template:Synagogue_disambiguation|Template:Taxonomic_authority_disambiguation|Template:Taxonomy_disambiguation|Template:Wikipedia_disambiguation|Template:Set_index_article|Template:Animal_common_name|Template:Chemistry_index|Template:Enzyme_index|Template:Fungus_common_name|Template:Given_name|Template:Lake_index|Template:Locomotive_index|Template:Molecular_formula_index|Template:Mountain_index|Template:Nickname|Template:Plant_common_name|Template:River_index|Template:Road_index|Template:Ship_index|Template:Sport_index|Template:Storm_index|Template:Surname&titles=${keywords}`;
+  fetch(url)
+    .then(resp => resp.json())
+    .then((data) => {
+      const pageid = data.query.pageids[0];
+      if (pageid === '-1') {
         // If there is no page, check other languages
-        suggestLanguages(selection)
-      } else if (data['query']['pages'][pageid]['templates']) {
-
+        languages(keywords);
+      } else if (data.query.pages[pageid].templates) {
         // Display disambiguation pages
-        disambiguate(selection)
+        disambiguate(keywords);
       } else {
-        
         // Display extract
-        articleTitle = document.createElement('div')
-        articleTitle.setAttribute('id', 'title')
-        articleTitle.textContent = selection        
-        articleBody = document.createElement('div')
-        articleBody.setAttribute('id', 'article')
-        articleBody.textContent = data['query']['pages'][pageid]['extract']
-        referenceContainer = document.createElement('div')
-        referenceContainer.setAttribute('id', 'reference')
-        reference = document.createElement('a')
-        reference.setAttribute('href', 'https://en.wikipedia.org/wiki/' + selection)
-        reference.textContent = "Wikipedia"
-        referenceContainer.appendChild(reference)
-        separator1 = document.createElement('hr')
-        separator1.setAttribute('id', 'titleseparator')
-        separator2 = document.createElement('hr')
-        separator2.setAttribute('id', 'refseparator')
-        body = document.body
-        body.appendChild(articleTitle)
-        body.appendChild(separator1)
-        body.appendChild(articleBody)
-        body.appendChild(separator2)
-        body.appendChild(referenceContainer)
-        
+        const title = document.createElement('div');
+        title.className = 'title';
+        title.textContent = keywords;
+        const body = document.createElement('div');
+        body.textContent = data.query.pages[pageid].extract;
+        const reference = document.createElement('div');
+        reference.className = 'reference';
+        const link = document.createElement('a');
+        link.setAttribute('href', `https://en.wikipedia.org/wiki/${keywords}`);
+        link.textContent = 'Wikipedia';
+        reference.appendChild(link);
+        const separator1 = document.createElement('hr');
+        separator1.className = 'titleseparator';
+        const separator2 = document.createElement('hr');
+        separator2.className = 'refseparator';
+        document.body.appendChild(title);
+        document.body.appendChild(separator1);
+        document.body.appendChild(body);
+        document.body.appendChild(separator2);
+        document.body.appendChild(reference);
+
         // Focus cursor on sidebar
-        if (document.getElementById('focused')) {
-          document.getElementById('focused').remove()
+        if (document.getElementsByTagName('INPUT')[0]) {
+          document.getElementsByTagName('INPUT')[0].remove();
         }
 
         // Search text selections inside extract
-        function makeTooltip() {
-          newSelection = window.getSelection()
-          if (newSelection.toString() != "") {
-
+        const tooltip = function drawSelectionTooltip() {
+          const selection = window.getSelection();
+          if (selection.toString() !== '') {
             // Make tooltip
-            range = newSelection.getRangeAt(0)
-            rect = range.getBoundingClientRect()
-            tooltipHolder = document.createElement('div')
-            tooltipHolder.setAttribute('id', 'tooltip')
-            tooltipTop = rect.top + window.scrollY
-            tooltipHolder.style.top = tooltipTop + 'px'
-            tooltipHolder.style.left = rect.left + 'px'
-            tooltipHolder.style.height = rect.height + 'px'
-            tooltipHolder.style.width = rect.width + 'px'
-            tooltipText = document.createElement('a')
-            tooltipText.textContent = "W"
-            tooltipText.setAttribute('id', 'tooltiptext')
-            tooltipText.setAttribute('data-selection', newSelection.toString())
-            tooltipText.addEventListener("click", function( event ) {
-              articleTitle.remove()
-              separator1.remove()
-              articleBody.remove()
-              separator2.remove()
-              referenceContainer.remove()
-              if (document.getElementById('imagedivdiv')) {
-                document.getElementById('imagedivdiv').remove()
-              }
-              wikipediaBody(event.target.getAttribute('data-selection'), 'en')
-              tooltipHolder.remove()
-            })
-            tooltipHolder.appendChild(tooltipText)
+            const range = selection.getRangeAt(0);
+            const rect = range.getBoundingClientRect();
+            const container = document.createElement('div');
+            container.setAttribute('id', 'tooltip');
+            container.style.top = `${rect.top + window.scrollY}px`;
+            container.style.left = `${rect.left}px`;
+            container.style.height = `${rect.height}px`;
+            container.style.width = `${rect.width}px`;
+            const w = document.createElement('a');
+            w.textContent = 'W';
+            w.setAttribute('id', 'tooltiptext');
+            w.setAttribute('data-selection', selection.toString());
+            w.addEventListener(
+              'click',
+              (event) => {
+                title.remove();
+                separator1.remove();
+                body.remove();
+                separator2.remove();
+                reference.remove();
+                if (document.getElementsByClassName('imgsupercontain')[0]) {
+                  document.getElementsByClassName('imgsupercontain')[0].remove();
+                }
+                extract(event.target.getAttribute('data-selection'));
+                container.remove();
+              },
+            );
+            container.appendChild(w);
             if (document.getElementById('tooltip')) {
-              document.getElementById('tooltip').remove()
+              document.getElementById('tooltip').remove();
             }
-            document.body.appendChild(tooltipHolder)
-          } else {
-            if (document.getElementById('tooltip')) {
-              document.getElementById('tooltip').remove()
-            }
-          }          
-        }
-        articleBody.addEventListener('mouseup', makeTooltip)      
+            document.body.appendChild(container);
+          } else if (document.getElementById('tooltip')) {
+            document.getElementById('tooltip').remove();
+          }
+        };
+        body.addEventListener(
+          'mouseup',
+          tooltip,
+        );
 
         // Get image
-        wikipediaImage(selection)
+        thumbnail(keywords);
       }
-    })
-}
+    });
+};
 
-function noSelection(){
-  whatSelection = document.createElement('div')
-  whatSelection.setAttribute('id', 'noselection')
-  whatMessage = document.createElement('p')
-  whatMessage.textContent = "You selected nothing or this page doesn't allow me get your selection."
-  whatInvitation = document.createElement('p')
-  whatInvitation.textContent = "Please type your query:"
-  whatSelection.appendChild(whatMessage)
-  whatSelection.appendChild(whatInvitation)
-  searchBox = document.getElementById('focused')
-  body = document.body
-  body.insertBefore(whatSelection, searchBox)
-  searchBox.setAttribute('style', 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 0px 25px; line-height: 25px; border-radius: 3px; width: 75%')
-  searchBox.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-      whatSelection.remove()
-      searchBox.setAttribute('style', 'border: none; color: #fbfbfb; background: #fbfbfb;')
-      wikipediaBody(searchBox.value, 'en')
-    }
-  })
-}
+const manual = function typeSearch() {
+  const explain = document.createElement('div');
+  explain.className = 'small';
+  const text1 = document.createElement('p');
+  text1.className = 'snippet';
+  text1.textContent = "You selected nothing or this page doesn't allow me get your selection.";
+  const text2 = document.createElement('p');
+  text2.className = 'snippet';
+  text2.textContent = 'Please type your query:';
+  explain.appendChild(text1);
+  explain.appendChild(text2);
+  const input = document.getElementsByTagName('INPUT')[0];
+  document.body.insertBefore(explain, input);
+  input.setAttribute('style', 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 0px 25px; line-height: 25px; border-radius: 3px; width: 75%');
+  input.addEventListener(
+    'keyup',
+    (event) => {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        explain.remove();
+        input.setAttribute('style', 'border: none; color: #fbfbfb; background: #fbfbfb;');
+        extract(input.value);
+      }
+    },
+  );
+};
 
-function messageDo(message) {
-  selection = message.selected
-  if (selection == ""){
-    noSelection()
+const create = function actOnContentScriptMessage(message) {
+  const keywords = encodeURIComponent(message.selected);
+  if (keywords === '') {
+    manual();
   } else {
-    wikipediaBody(selection, 'en')
-  }
-}
-
-function tabDo(tabs) {
-  for (let tab of tabs) {
-    browser.runtime.onMessage.addListener(messageDo);
-    var tabScript = browser.tabs.executeScript(tab.id, {file: 'getselection.js'});
+    extract(keywords);
   }
 };
 
 function init() {
-  var queryTabs = browser.tabs.query({currentWindow: true, active: true})
-  queryTabs.then(tabDo)
-};
+  browser.tabs.query({ currentWindow: true, active: true })
+    .then((tabs) => {
+      tabs.forEach((tab) => {
+        browser.runtime.onMessage.addListener(create);
+        browser.tabs.executeScript(tab.id, { file: 'getselection.js' });
+      });
+    });
+}
 
 init();

@@ -24,20 +24,80 @@ div{
     padding: 15px 25px;
 }
 
-#imagediv{
+.intro {
+    padding-bottom: 0px
+}
+
+.middle{
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+input{
+    border: none;
+    color: #fbfbfb;
+    background: #fbfbfb;
+}
+
+a {
+    color: #a26d54;
+    text-decoration: none;
+    cursor: pointer
+}
+
+a:hover {
+    background-color: #fffabf;
+    color: #a26d54;
+    text-decoration: none;
+    border-radius: 2px
+}
+
+.selected{
+    background-color: #fffabf;
+    color: #a26d54;
+    text-decoration: none;
+    border-radius: 2px
+}
+
+.small {
+    font-size: 0.9em;
+}
+
+.simple {
     padding: 0px;
+}
+
+.snippet {
+    margin-top: 8px;
+}
+
+hr{
+    border: 0;    
+    border-top: 1px dotted #c3c2c2;
+    margin: 20px 0;
+}
+
+.section {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0em 0em 0.5em 0em
+}
+
+.candidate{
+    margin: 0.9em 0.5em;
+    font-size: 0.9em;
+}
+
+.imgcontain{
     max-height: 300px;
     overflow: hidden;
+}
+
+.imgsupercontain{
     mask-image: linear-gradient(to bottom, rgb(173, 173, 173), rgba(255, 255, 255, 0.61));
 }
 
-#imagedivdiv{
-    padding: 0px;
-    max-height: 300px;
-    overflow: hidden;
-}
-
-#imgback{
+.imgback{
     position:absolute;
     height: 300px;
     width: 100%;
@@ -51,165 +111,13 @@ img{
     height: auto;
 }
 
-
-a {
-    color: #a26d54;
-    text-decoration: none;
-    cursor: pointer
-}
-
-a:hover{
-    background-color: #fffabf;
-    color: #a26d54;
-    text-decoration: none;
-    border-radius: 2px
-}
-
-#reference{
-    padding: 15px 25px 30px 20px;
-    display: block;
-}
-
-#reference a{
-    padding: 5px 5px;
-    border-radius: 3px
-}
-
-#title {
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 12px 25px;
-    margin: 0px;
-}
-
-.domain {
-    font-size: 1.1em;
-    font-weight: bold;
-    padding: 0em 0em 0.5em 0em
-}
-
-.similar {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 0em 0em 0.5em 0em
-}
-
-.candidate{
-    margin: 0.9em 0.5em;
-    font-size: 0.9em;
-}
-
-.result{
-    padding: 0px;
-    font-size: 0.9em;
-}
-
-#suggestions, #searchresults, #languagebox{
-    padding-top: 0px
-}
-
-#noarticle{
-    padding: 0px 20px;
-    font-size: 1em    
-}
-
-#intro{
-    padding: 10px 10px 0px 0px;
-    font-size: 1em
-}
-
-.external{
-    color: #8b888b;
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(transparent,transparent),url("external.svg");
-    padding-right: 13px
-}
-
-.wiki{
-    padding: 3px
-}
-
-.selected{
-    background-color: #fffabf;
-    color: #a26d54;
-    text-decoration: none;
-    padding: 3px;
-    border-radius: 2px
-}
-
-#focused{
-    border: none;
-    color: #fbfbfb;
-    background: #fbfbfb;
-}
-
-hr{
-    border: 0;    
-    border-top: 1px dotted #c3c2c2;
-    margin: 20px 0;
-}
-
-#imageseparator{
-    border-style: solid;
-    border-width: 1px 0px 0px 0px;
-    border-color: #5c5c5c;
-    margin: 3px 0px 0px 0px;
-}
-
-#titleseparator{
-    border-style: dotted;
-    border-width: 1px 0px 0px 0px;
-    border-color: #c3c2c2;
+.titleseparator{
     margin: 2px 25px;
 }
 
-#refseparator{
-    border-style: dotted;
-    border-width: 1px 0px 0px 0px;
-    border-color: #c3c2c2;
+.refseparator{
     margin: 2px 60% 2px 25px;
 }
-
-#noselection p{
-    margin: 10px 0px
-}
-
-.searchmatch{
-    font-weight: bold
-}
-
-.result a{
-    padding: 0px;
-}
-
-.result p{
-    margin: 8px 0px 0px 0px;
-}
-
-#searchheader{
-    padding-bottom: 0px
-}
-
-#searchheader p{
-    padding: 0px
-}
-
-#searchexplain{
-    font-size: 0.9em
-}
-
-#searchcount{
-  font-size: 1em;
-  color: #bfbfbf;      
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 
 #tooltip {
     margin: 0px;
@@ -222,7 +130,7 @@ ul {
     color: #fff9ff;
     background-position: center;
     background-repeat: no-repeat;
-    bottom: 120%;
+    bottom: 110%;
     border-radius: 2px;
     position: absolute;
     z-index: 1;
@@ -233,4 +141,40 @@ ul {
     padding: 3px 5px;
     font-size: 16px;
     background-color: #4a4a4a;
+    animation-duration: 0.2s;
+    animation-name: pop;
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        bottom: 100%;
+        height: 0%;
+    }
+    50% {
+        opacity:1;
+        bottom: 117%; 
+        height: 120%;
+    }   
+    100% {
+        bottom: 110%;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 12px 25px;
+    margin: 0px;
+}
+
+.reference a {
+    padding: 5px 5px;
+    border-radius: 3px    
 }
