@@ -93,18 +93,7 @@ hr{
     overflow: hidden;
 }
 
-.imgsupercontain{
-    mask-image: linear-gradient(to bottom, rgb(173, 173, 173), rgba(255, 255, 255, 0.61));
-}
-
-.imgback{
-    position:absolute;
-    height: 300px;
-    width: 100%;
-    background-color: #fbfbfb
-}
-
-img{
+#articleimg{
     position:relative;
     display:block;
     width: 100%;
@@ -167,7 +156,7 @@ ul {
     padding: 0;
 }
 
-.title {
+#title {
     font-size: 1.5em;
     font-weight: bold;
     padding: 12px 25px;
