@@ -1,17 +1,17 @@
 /* global browser, window, document, DOMParser, fetch:false */
 
-/**
+/*
  * TODO:
  * Do something about articles that consist of mostly tables: e.g. {@link https://en.wikipedia.org/wiki/Armorial_of_the_Communes_of_Seine-Maritime}
  * Test more, discover and support other types of articles
  */
 
-/**
+/*
  * The document body.
  */
 const sidebar = document.body;
 
-/**
+/*
  * Wikipedia language codes, as defined in {@link https://github.com/inventaire/wikidata-lang/blob/master/lib/lang.json}.
  */
 const languageCodes = {
@@ -19,7 +19,7 @@ const languageCodes = {
 };
 
 
-/**
+/*
  * Assemble URLs so functions look a little prettier.
  */
 const urls = (function urlMaker() {
@@ -47,7 +47,7 @@ const urls = (function urlMaker() {
   };
 }());
 
-/**
+/*
  * Return DOM element with any set of properties.
  */
 const element = function makeElement(tag, properties = '') {
@@ -66,7 +66,7 @@ const element = function makeElement(tag, properties = '') {
   return el;
 };
 
-/**
+/*
  * The only way I could focus the cursor on the sidebar automatically
  * with the current state of webextensions was to create an autofocused 
  * input element directly on the sidebar html. In most cases, this 
@@ -79,7 +79,7 @@ const noinput = function removeInputElement() {
   }
 };
 
-/**
+/*
  * The entry point.
  * 
  * It loads a content script on the current tab and dispatches
@@ -95,7 +95,7 @@ const init = function handleContentScript() {
     });
 };
 
-/**
+/*
  * After receiving the content script message.
  * 
  * If the message contains a non-empty string, try to get its extract: {@link extract}.
@@ -110,7 +110,7 @@ const create = function actOnContentScriptMessage(message) {
   }
 };
 
-/**
+/*
  * Let the user write a query on an input box.
  *
  * Explain that the we couldn't get any text selection.
@@ -145,7 +145,8 @@ const write = function writeQuery() {
   sidebar.insertBefore(explain, input);
 };
 
-/**
+let last = '';
+/*
  * Display a tooltip on top of text selections to search for extracts.
  * 
  * If the selection is not empty, draw a box over it that holds a link.
@@ -191,7 +192,7 @@ const tooltip = function displaySelectionTooltip() {
   }
 };
 
-/**
+/*
  * Try to display the thumbnail image for an extract.
  *
  * Draw a background for the image so it looks good if it includes transparency.
@@ -223,7 +224,7 @@ const thumbnail = function getWikipediaThumbnail(keywords, lang = 'en') {
     });
 };
 
-/**
+/*
  * Try to display an extract.
  *
  * If the query has an extract and it isn't a disambiguation page
@@ -280,7 +281,7 @@ const extract = function getWikipediaExtract(keywords, lang = 'en') {
     });
 };
 
-/**
+/*
  * Keyboard navigation for pages that consist of a list of links.
  *
  * Select the first navigable link,
@@ -334,7 +335,7 @@ const navigation = function keyboardNavigation() {
   sidebar.addEventListener('keyup', rules);
 };
 
-/**
+/*
  * Display a list of languages in which an extract exists.
  *
  * If the query exists in a language, list it
@@ -412,7 +413,7 @@ const languages = function checkNonEnglishPages(keywords) {
     });
 };
 
-/**
+/*
  * Display a list of articles that contain the query in any part.
  *
  * If the query appears in any article, display it in a list with 20 results at most, 
@@ -519,7 +520,7 @@ const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
 };
 
 
-/**
+/*
  * Display a list of disambiguation candidates and their sections.
  *
  * Contrary to other functions, in this case the Wikipedia API falls short
@@ -659,7 +660,7 @@ const disambiguate = function displayDisambiguationPage(keywords) {
     });
 };
 
-/**
+/*
  * Let the fun start.
  */
 init();

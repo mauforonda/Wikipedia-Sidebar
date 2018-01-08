@@ -1,20 +1,44 @@
-@font-face { font-family: "et-book";
-             src: url("et-book-roman-line-figures.woff");
-             font-weight: normal;
-             font-style: normal; }
+@font-face {
+    font-family: 'charterbold';
+    src: url('fonts/charter_bold-webfont.eot');
+    src: url('fonts/charter_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/charter_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-@font-face { font-family: "et-book";
-             src: url("et-book-bold-line-figures.woff");
-             font-weight: bold;
-             font-style: normal; }
+@font-face {
+    font-family: 'charteritalic';
+    src: url('fonts/charter_italic-webfont.eot');
+    src: url('fonts/charter_italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/charter_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charterregular';
+    src: url('fonts/charter_regular-webfont.eot');
+    src: url('fonts/charter_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/charter_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AbrilFatface-Regular';
+    src: url('fonts/abril_fatface.eot');
+    src: url('fonts/abril_fatface.eot?#iefix') format('embedded-opentype'),url('fonts/abril_fatface.woff2') format('woff2'),url('fonts/abril_fatface.woff') format('woff'),url('fonts/abril_fatface.ttf') format('truetype');
+}
+
 
 body {
-    font-family: et-book;
-    font-size: 14px;
-    line-height: 1.4;
+    font-family: charterregular;
+    font-size: 13px;
+    line-height: 1.5;
     margin: 0px;
     padding: 0px;
-    color: #8b888b;
+    color: #5f5f5f;
     background-color: #fbfbfb;
     overflow-x: hidden
 }
@@ -39,22 +63,22 @@ input{
     background: #fbfbfb;
 }
 
-a {
-    color: #a26d54;
+a { 
+    color: #9e2f2f;
     text-decoration: none;
     cursor: pointer
 }
 
 a:hover {
-    background-color: #fffabf;
-    color: #a26d54;
+    background-color: #f9eeee;
+    color: #0c0a0a;
     text-decoration: none;
     border-radius: 2px
 }
 
 .selected{
-    background-color: #fffabf;
-    color: #a26d54;
+    background-color: #f9eeee;
+    color: #0c0a0a;
     text-decoration: none;
     border-radius: 2px
 }
@@ -78,8 +102,8 @@ hr{
 }
 
 .section {
+    font-family: AbrilFatface-Regular;
     font-size: 1.2em;
-    font-weight: bold;
     padding: 0em 0em 0.5em 0em
 }
 
@@ -116,6 +140,7 @@ hr{
 }
 
 #tooltiptext {
+    font-family: AbrilFatface-Regular;
     color: #fff9ff;
     background-position: center;
     background-repeat: no-repeat;
@@ -127,11 +152,13 @@ hr{
     width: 18px;
     background-size: contain;
     display: block;
-    padding: 3px 5px;
+    padding: 3px 3px;
     font-size: 16px;
-    background-color: #4a4a4a;
+    background-color: #0c0a0a;
     animation-duration: 0.2s;
     animation-name: pop;
+    text-align: center;
+    line-height: 1.5em;
 }
 
 @keyframes pop {
@@ -157,13 +184,17 @@ ul {
 }
 
 #title {
+    font-family: AbrilFatface-Regular;
     font-size: 1.5em;
-    font-weight: bold;
-    padding: 12px 25px;
+    padding: 15px 25px 12px 25px;
     margin: 0px;
 }
 
 .reference a {
-    padding: 5px 5px;
+    padding: 5px 0px;
     border-radius: 3px    
+}
+
+i{
+    font-family: charteritalic;
 }
