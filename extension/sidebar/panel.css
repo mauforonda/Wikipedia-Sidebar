@@ -43,6 +43,11 @@ body {
     overflow-x: hidden
 }
 
+::-moz-selection{
+    background-color: #0c0a0a;
+    color: #fff9ff;
+}
+
 div{
     font-weight: normal;
     padding: 15px 25px;
@@ -169,8 +174,8 @@ hr{
     }
     50% {
         opacity:1;
-        bottom: 117%; 
-        height: 120%;
+        bottom: 112%; 
+        height: 115%;
     }   
     100% {
         bottom: 110%;

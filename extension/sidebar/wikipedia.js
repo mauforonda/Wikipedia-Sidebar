@@ -90,7 +90,7 @@ const init = function handleContentScript() {
     .then((tabs) => {
       tabs.forEach((tab) => {
         browser.runtime.onMessage.addListener(create);
-        browser.tabs.executeScript(tab.id, { file: 'getselection.js' });
+        browser.tabs.executeScript(tab.id, { file: '/sidebar/getselection.js' });
       });
     });
 };
@@ -145,7 +145,6 @@ const write = function writeQuery() {
   sidebar.insertBefore(explain, input);
 };
 
-let last = '';
 /*
  * Display a tooltip on top of text selections to search for extracts.
  * 
@@ -167,6 +166,10 @@ const tooltip = function displaySelectionTooltip() {
         width: `${rect.width}px`,
       },
     });
+    tip.addEventListener('click', () => {
+      tip.remove();
+      sidebar.removeEventListener('keyup', tipupdate);
+    });
     const link = element('a', {
       textContent: 'W',
       id: 'tooltiptext',
@@ -175,6 +178,7 @@ const tooltip = function displaySelectionTooltip() {
       },
     });
     link.addEventListener('click', (event) => {
+      sidebar.removeEventListener('keyup', tipupdate);
       const nodes = sidebar.querySelectorAll(':scope > :not(#tooltip)');
       nodes.forEach((node) => {
         node.remove();
@@ -185,10 +189,32 @@ const tooltip = function displaySelectionTooltip() {
     tip.appendChild(link);
     if (document.getElementById('tooltip')) {
       document.getElementById('tooltip').remove();
+      sidebar.removeEventListener('keyup', tipupdate);
     }
     sidebar.appendChild(tip);
+    sidebar.addEventListener('keyup', tipupdate);
   } else if (document.getElementById('tooltip')) {
     document.getElementById('tooltip').remove();
+    sidebar.removeEventListener('keyup', tipupdate);
+  }
+};
+
+/*
+ * Handle key events when there is a tooltip.
+ *
+ * If the user presses Enter, follow the tooltip link.
+ * Otherwise, update the link.
+ */
+
+const tipupdate = function updateTooltipSelection(event) {
+  if (document.getElementById('tooltiptext')) {
+    const link = document.getElementById('tooltiptext');
+    // event.preventDefault();
+    if (event.keyCode === 13) {
+      link.click();
+    } else {
+      link.dataset.selection = window.getSelection().toString();
+    }
   }
 };
 
