@@ -293,6 +293,7 @@ const extract = function getWikipediaExtract(keywords, lang = 'en') {
           className: 'simple',
           id: 'article',
         });
+        console.log('hi');
         article.appendChild(title);
         article.appendChild(titleseparator);
         article.appendChild(body);
@@ -333,10 +334,12 @@ const navigation = function keyboardNavigation() {
         links[selected].classList.remove('selected');
         selected -= 1;
         links[selected].classList.add('selected');
-        links[selected].scrollIntoView({
-          behavior: 'instant',
-          block: 'nearest',
-        });
+        const rect = links[selected].getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+          links[selected].scrollIntoView({
+            behavior: 'instant',
+            block: 'start',
+          })};
       }
       // Down
     } else if (map[40]) {
@@ -344,7 +347,12 @@ const navigation = function keyboardNavigation() {
         links[selected].classList.remove('selected');
         selected += 1;
         links[selected].classList.add('selected');
-        links[selected].scrollIntoView({ behavior: 'instant', block: 'nearest' });
+        const rect = links[selected].getBoundingClientRect();
+        if (rect.top < 0 || rect.bottom > window.innerHeight) {
+          links[selected].scrollIntoView({
+            behavior: 'instant',
+            block: 'end',
+          })};
       }
       // Close
     } else if (map[17] && map[16] && map[86]) {
