@@ -1,0 +1,13 @@
+
+/home/m/auricio/make/firefox/wikipedia/extension/options.js
+    1:11  error  'browser' is defined but never used    no-unused-vars
+    1:20  error  'window' is defined but never used     no-unused-vars
+    1:38  error  'DOMParser' is defined but never used  no-unused-vars
+    1:49  error  'fetch' is defined but never used      no-unused-vars
+  748:21  error  Missing trailing comma                 comma-dangle
+  749:4   error  Missing trailing comma                 comma-dangle
+  750:2   error  Missing semicolon                      semi
+
+✖ 7 problems (7 errors, 0 warnings)
+  3 errors, 0 warnings potentially fixable with the `--fix` option.
+
