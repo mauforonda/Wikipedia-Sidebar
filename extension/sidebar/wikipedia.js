@@ -18,6 +18,73 @@ const languageCodes = {
   aa: 'Afar', ab: 'Abkhazian', af: 'Afrikaans', ak: 'Akan', am: 'Amharic', an: 'Aragonese', ar: 'Arabic', as: 'Assamese', av: 'Avar', ay: 'Aymara', az: 'Azerbaijani', ba: 'Bashkir', be: 'Belarusian', bg: 'Bulgarian', bh: 'Bihari', bi: 'Bislama', bm: 'Bambara', bn: 'Bengali', bo: 'Tibetan', br: 'Breton', bs: 'Bosnian', ca: 'Catalan', ce: 'Chechen', ch: 'Chamorro', co: 'Corsican', cr: 'Cree', cs: 'Czech', cu: 'Old Church Slavonic / Old Bulgarian', cv: 'Chuvash', cy: 'Welsh', da: 'Danish', de: 'German', dv: 'Divehi', dz: 'Dzongkha', ee: 'Ewe', el: 'Greek', en: 'English', eo: 'Esperanto', es: 'Spanish', et: 'Estonian', eu: 'Basque', fa: 'Persian', ff: 'Peul', fi: 'Finnish', fj: 'Fijian', fo: 'Faroese', fr: 'French', fy: 'West Frisian', ga: 'Irish', gd: 'Scottish Gaelic', gl: 'Galician', gn: 'Guarani', gu: 'Gujarati', gv: 'Manx', ha: 'Hausa', he: 'Hebrew', hi: 'Hindi', ho: 'Hiri Motu', hr: 'Croatian', ht: 'Haitian', hu: 'Hungarian', hy: 'Armenian', hz: 'Herero', ia: 'Interlingua', id: 'Indonesian', ie: 'Interlingue', ig: 'Igbo', ii: 'Sichuan Yi', ik: 'Inupiak', io: 'Ido', is: 'Icelandic', it: 'Italian', iu: 'Inuktitut', ja: 'Japanese', jv: 'Javanese', ka: 'Georgian', kg: 'Kongo', ki: 'Kikuyu', kj: 'Kuanyama', kk: 'Kazakh', kl: 'Greenlandic', km: 'Cambodian', kn: 'Kannada', ko: 'Korean', kr: 'Kanuri', ks: 'Kashmiri', ku: 'Kurdish', kv: 'Komi', kw: 'Cornish', ky: 'Kirghiz', la: 'Latin', lb: 'Luxembourgish', lg: 'Ganda', li: 'Limburgian', ln: 'Lingala', lo: 'Laotian', lt: 'Lithuanian', lv: 'Latvian', mg: 'Malagasy', mh: 'Marshallese', mi: 'Maori', mk: 'Macedonian', ml: 'Malayalam', mn: 'Mongolian', mo: 'Moldovan', mr: 'Marathi', ms: 'Malay', mt: 'Maltese', my: 'Burmese', na: 'Nauruan', nd: 'North Ndebele', ne: 'Nepali', ng: 'Ndonga', nl: 'Dutch', nn: 'Norwegian Nynorsk', no: 'Norwegian', nr: 'South Ndebele', nv: 'Navajo', ny: 'Chichewa', oc: 'Occitan', oj: 'Ojibwa', om: 'Oromo', or: 'Oriya', os: 'Ossetian / Ossetic', pa: 'Panjabi / Punjabi', pi: 'Pali', pl: 'Polish', ps: 'Pashto', pt: 'Portuguese', qu: 'Quechua', rm: 'Raeto Romance', rn: 'Kirundi', ro: 'Romanian', ru: 'Russian', rw: 'Rwandi', sa: 'Sanskrit', sc: 'Sardinian', sd: 'Sindhi', se: 'Northern Sami', sg: 'Sango', sh: 'Serbo-Croatian', si: 'Sinhalese', sk: 'Slovak', sl: 'Slovenian', sm: 'Samoan', sn: 'Shona', so: 'Somalia', sq: 'Albanian', sr: 'Serbian', ss: 'Swati', st: 'Southern Sotho', su: 'Sundanese', sv: 'Swedish', sw: 'Swahili', ta: 'Tamil', te: 'Telugu', tg: 'Tajik', th: 'Thai', ti: 'Tigrinya', tk: 'Turkmen', tl: 'Tagalog / Filipino', tn: 'Tswana', to: 'Tonga', tr: 'Turkish', ts: 'Tsonga', tt: 'Tatar', tw: 'Twi', ty: 'Tahitian', ug: 'Uyghur', uk: 'Ukrainian', ur: 'Urdu', uz: 'Uzbek', ve: 'Venda', vi: 'Vietnamese', vo: 'Volapük', wa: 'Walloon', wo: 'Wolof', xh: 'Xhosa', yi: 'Yiddish', yo: 'Yoruba', za: 'Zhuang', zh: 'Chinese', zu: 'Zulu',
 };
 
+/*
+ * Strings for some languages
+ */
+const languageStrings = {
+  en: {
+    write1: "Search...",
+    language1: "I found exact pages for your query in these languages:",
+    language2: "Or get full text search results in your language",
+    disambiguate1: " may refer to:",
+    fulltext1: "Couldn't find anything for that",
+    fulltext2: "Found ",
+    fulltext3: " results inside Wikipedia articles",
+    fulltext4: "Next 20 results",
+    fulltext5: "Results ",
+    fulltext6: " to "
+  },
+  es: {
+    write1: "Buscar...",
+    language1: "Encontré páginas exactas para tu búsqueda en estos idiomas:",
+    language2: "O busca dentro del texto de artículos en tu idioma",
+    disambiguate1: " puede referirse a:",
+    fulltext1: "No pude encontrar nada para tu búsqueda",
+    fulltext2: "Encontré ",
+    fulltext3: " resultados en artículos de Wikipedia",
+    fulltext4: "Próximos 20 resultados",
+    fulltext5: "Resultados ",
+    fulltext6: " a "
+  },
+  de: {
+    write1: "Suchen...",
+    language1: "Ich habe genaue Seiten für deine Suche in diesen Sprachen gefunden",
+    language2: "Suche Texte zu Artikel in deiner Sprache",
+    disambiguate1: " kann sich beziehen auf:",
+    fulltext1: "Ich habe nichts zu deiner Suche gefunden",
+    fulltext2: "Ich habe ",
+    fulltext3: " Ergebnisse zu Artikeln auf Wikipedia gefunden",
+    fulltext4: "Die nächsten 20 Ergebnisse",
+    fulltext5: "Ergbnisse ",
+    fulltext6: " bis "
+  }
+}
+
+/*
+ * Retrieve selected language, default to English
+ */
+let myLanguage;
+let myStrings;
+const options = (function extensionOptions() {
+  function selectedOptions(local) {
+    if (local.language) {
+      myLanguage = local.language.code
+      if (languageStrings[myLanguage]) {
+        myStrings = languageStrings[myLanguage]
+      } else {
+        myStrings = languageStrings.en
+      }
+    } else {
+      myLanguage = 'en'
+      myStrings = languageStrings.en
+    }
+  }
+  return {
+    selected: selectedOptions,
+  };
+}())
+browser.storage.local.get('language')
+  .then(options.selected)
 
 /*
  * Assemble URLs so functions look a little prettier.
@@ -35,8 +102,8 @@ const urls = (function urlMaker() {
   function languageUrl(keywords) {
     return `https://www.wikidata.org/w/api.php?format=json&action=wbgetentities&sites=enwiki|frwiki|eswiki|dewiki&props=sitelinks&titles=${encodeURIComponent(keywords)}`;
   }
-  function fulltextUrl(keywords, offset) {
-    return `https://en.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&list=search&srlimit=20&srprop=snippet&sroffset=${offset}&srsearch=${encodeURIComponent(keywords)}`;
+  function fulltextUrl(keywords, offset, lang = 'en') {
+    return `https://${lang}.wikipedia.org/w/api.php?format=json&action=query&redirects=1&indexpageids=&list=search&srlimit=20&srprop=snippet&sroffset=${offset}&srsearch=${encodeURIComponent(keywords)}`;
   }
   return {
     extract: extractUrl,
@@ -86,11 +153,17 @@ const noinput = function removeInputElement() {
  * the message it sends to {@link create}.
  */
 const init = function handleContentScript() {
+  function onSuccess(){
+  };
+  function onError(){
+    inboarding()
+  };
   browser.tabs.query({ currentWindow: true, active: true })
     .then((tabs) => {
       tabs.forEach((tab) => {
         browser.runtime.onMessage.addListener(create);
-        browser.tabs.executeScript(tab.id, { file: '/sidebar/getselection.js' });
+        browser.tabs.executeScript(tab.id, { file: '/sidebar/getselection.js' })
+          .then(onSuccess, onError);
       });
     });
 };
@@ -106,8 +179,34 @@ const create = function actOnContentScriptMessage(message) {
   if (keywords === '') {
     write();
   } else {
-    extract(keywords);
+    extract(keywords, myLanguage);
   }
+};
+
+/*
+ * Inboarding page
+ */
+const inboarding = function displayInboarding() {
+  const input = document.getElementsByTagName('INPUT')[0];
+  input.style = 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 15px 25px; line-height: 25px; border-radius: 3px; width: 75%';
+  input.placeholder = myStrings.write1
+  input.addEventListener('keyup', (event) => {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      image.remove();
+      input.style = 'border: none; color: #fbfbfb; background: #fbfbfb;';
+      extract(input.value, myLanguage);
+    }
+  });
+  const image = element('img', {
+    src: "inboard.svg",
+    style: {
+      "padding-left": "15%",
+      width: "70%",
+      height: "auto",
+    },
+  });
+  sidebar.appendChild(image);
 };
 
 /*
@@ -118,31 +217,16 @@ const create = function actOnContentScriptMessage(message) {
  * Get the input value extract as soon as the user presses Enter: {@link extract}.
  */
 const write = function writeQuery() {
-  const explain = element('div', {
-    className: 'small',
-  });
-  [
-    "You selected nothing or this page doesn't allow me get your selection.",
-    'Please type your query:',
-  ]
-    .forEach((text) => {
-      const phrase = element('p', {
-        className: 'snippet',
-        textContent: text,
-      });
-      explain.appendChild(phrase);
-    });
   const input = document.getElementsByTagName('INPUT')[0];
-  input.style = 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 0px 25px; line-height: 25px; border-radius: 3px; width: 75%';
+  input.style = 'border: #a26d54; border-style: solid; border-width: 1px; color: #a26d54; background: #ffffff; padding: 0px 7px; margin: 15px 25px; line-height: 25px; border-radius: 3px; width: 75%';
+  input.placeholder = myStrings.write1
   input.addEventListener('keyup', (event) => {
     event.preventDefault();
     if (event.keyCode === 13) {
-      explain.remove();
       input.style = 'border: none; color: #fbfbfb; background: #fbfbfb;';
-      extract(input.value);
+      extract(input.value, myLanguage);
     }
   });
-  sidebar.insertBefore(explain, input);
 };
 
 /*
@@ -183,7 +267,7 @@ const tooltip = function displaySelectionTooltip() {
       nodes.forEach((node) => {
         node.remove();
       });
-      extract(event.target.dataset.selection);
+      extract(event.target.dataset.selection, myLanguage);
       tip.remove();
     });
     tip.appendChild(link);
@@ -293,7 +377,6 @@ const extract = function getWikipediaExtract(keywords, lang = 'en') {
           className: 'simple',
           id: 'article',
         });
-        console.log('hi');
         article.appendChild(title);
         article.appendChild(titleseparator);
         article.appendChild(body);
@@ -303,7 +386,7 @@ const extract = function getWikipediaExtract(keywords, lang = 'en') {
         sidebar.appendChild(article);
         noinput();
         body.addEventListener('mouseup', tooltip);
-        thumbnail(keywords);
+        thumbnail(keywords, myLanguage);
       }
     });
 };
@@ -411,7 +494,7 @@ const languages = function checkNonEnglishPages(keywords) {
           if (list.children.length > 0) {
             const explain = element('div', {
               className: 'small',
-              textContent: 'There is no exact page for that in English, but I found it in these languages:',
+              textContent: myStrings.language1,
             });
             const container = element('div', {
               className: 'middle',
@@ -420,14 +503,14 @@ const languages = function checkNonEnglishPages(keywords) {
             const search = element('div');
             const get = element('a', {
               className: 'navigable',
-              textContent: 'Or get full text search results in English',
+              textContent: myStrings.language2,
             });
             get.addEventListener('click', () => {
               const nodes = sidebar.querySelectorAll(':scope > :not(input)');
               nodes.forEach((node) => {
                 node.remove();
               });
-              fulltext(keywords);
+              fulltext(keywords, 0, myLanguage);
             });
             container.appendChild(list);
             search.appendChild(get);
@@ -437,12 +520,12 @@ const languages = function checkNonEnglishPages(keywords) {
             navigation();
             noinput();
           } else {
-            fulltext(keywords);
+            fulltext(keywords, 0, myLanguage);
           }
         }
       });
       if (document.getElementById('languages') == null) {
-        fulltext(keywords);
+        fulltext(keywords, 0, myLanguage);
       }
     });
 };
@@ -456,8 +539,8 @@ const languages = function checkNonEnglishPages(keywords) {
  * Otherwise, explain that we couldn't find an extract in any language
  * or even a match in the content of any article.
  */
-const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
-  const url = urls.fulltext(keywords, offset);
+const fulltext = function checkFullTextSearchResults(keywords, offset = 0, lang = 'en') {
+  const url = urls.fulltext(keywords, offset, lang);
   fetch(url)
     .then(resp => resp.json())
     .then((data) => {
@@ -465,10 +548,10 @@ const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
       if (totalhits === 0) {
         const suggestion = data.query.searchinfo.suggestion;
         if (suggestion) {
-          fulltext(suggestion, 0);
+          fulltext(suggestion, 0, myLanguage);
         } else {
           const nothing = element('div', {
-            textContent: "Couldn't find a page or search results for that",
+            textContent: myStrings.fulltext1,
           });
           sidebar.appendChild(nothing);
         }
@@ -481,9 +564,9 @@ const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
             className: 'small',
           });
           [
-            "There's no exact page for that, but I found ",
+            myStrings.fulltext2,
             String(totalhits),
-            ' search results on Wikipedia.',
+            myStrings.fulltext3
           ]
             .forEach((item) => {
               const phrase = document.createTextNode(item);
@@ -507,7 +590,7 @@ const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
             nodes.forEach((node) => {
               node.remove();
             });
-            extract(event.target.textContent);
+            extract(event.target.textContent, myLanguage);
           });
           const snippet = element('p', {
             className: 'snippet',
@@ -530,20 +613,20 @@ const fulltext = function checkFullTextSearchResults(keywords, offset = 0) {
           });
           const link = element('a', {
             className: 'navigable',
-            textContent: 'Next 20 results',
+            textContent: myStrings.fulltext4,
           });
           link.addEventListener('click', () => {
             const nodes = sidebar.querySelectorAll(':scope > :not(input)');
             nodes.forEach((node) => {
               node.remove();
             });
-            fulltext(keywords, last);
+            fulltext(keywords, last, myLanguage);
           });
           next.appendChild(link);
           sidebar.appendChild(next);
         }
         const count = element('p', {
-          textContent: `Results ${String(offset)} to ${String(last)}`,
+          textContent: myStrings.fulltext5 + String(offset) + myStrings.fulltext6 + String(last),
         });
         intro.appendChild(count);
         sidebar.insertBefore(intro, results);
@@ -575,7 +658,7 @@ const disambiguate = function displayDisambiguationPage(keywords) {
     const bold = element('b', {
       textContent: k,
     });
-    const text = document.createTextNode(' may refer to:');
+    const text = document.createTextNode(myStrings.disambiguate1);
     explain.appendChild(bold);
     explain.appendChild(text);
     return explain;
@@ -591,7 +674,7 @@ const disambiguate = function displayDisambiguationPage(keywords) {
       nodes.forEach((node) => {
         node.remove();
       });
-      extract(event.target.textContent);
+      extract(event.target.textContent, myLanguage);
     });
     return link;
   }

@@ -753,10 +753,43 @@ languages.forEach((lang) => {
 const form = document.getElementById('languages');
 form.appendChild(menu);
 
-const menuDOM = document.getElementsByTagName('select')[0];
-
+/*
+ * Save selected language
+ */
 const save = function saveOptions() {
-  console.log(menuDOM.value);
+  let i = menu.selectedIndex;
+  let language = {
+    name: menu.options[i].text,
+    code: menu.options[i].value,
+    index: i,
+  };
+  browser.storage.local.set({language});
+  confirmation = document.getElementById('saved');
+  confirmation.className = 'appear';
+  setTimeout(function() {confirmation.className = 'disappear'}, 1000)
 };
 
-menuDOM.addEventListener('onchange', save);
+/*
+ * Display selected language in menu, English by default
+ */
+const restore = function restoreOptions() {
+  const selected = function(options) {
+    if (options.language) {
+      menu.selectedIndex = options.language.index;
+    } else {
+      menu.selectedIndex = 36;
+    }
+  };
+  browser.storage.local.get('language')
+    .then(selected);
+};
+
+/*
+ * When a menu option is selected
+ */
+menu.addEventListener('change', save);
+
+/*
+ * When the document is loaded
+ */
+document.addEventListener('DOMContentLoaded', restore);

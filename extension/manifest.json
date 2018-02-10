@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Wikipedia Sidebar",
-  "description": "Wikipedia abstracts in a sidebar.",
-  "version": "2.3",
+  "description": "Wikipedia in a sidebar.",
+  "version": "2.4",
   "homepage_url": "https://github.com/strangel8p/Wikipedia-Sidebar",
 
   "icons": {
@@ -32,13 +32,14 @@
   },
 
   "options_ui": {
-    "page": "options.html",
+    "page": "options/options.html",
     "browser_style": true
   },
 
   "permissions": [
     "activeTab",
-    "<all_urls>"
+    "<all_urls>",
+    "storage"
   ]
 
 }
